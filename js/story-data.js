@@ -37,7 +37,7 @@ const storyData = {
         // Page 1: Park entrance
         {
             id: 1,
-            image: "page1.jpg",
+            image: "page1.svg",
             description: "Park entrance with a gate, trees, and a path leading into the park",
             narratorIntro: "Welcome to a sunny day at Sesame Park! Who would you like to follow on this adventure?",
             isChoicePoint: true,
@@ -64,7 +64,7 @@ const storyData = {
         // Page 2: Playground equipment
         {
             id: 2,
-            image: "page2.jpg",
+            image: "page2.svg",
             description: "Playground with swings, slides, and other equipment",
             narratorIntro: "Everyone has arrived at the playground! Which character would you like to follow now?",
             isChoicePoint: true,
@@ -91,7 +91,7 @@ const storyData = {
         // Page 3: Picnic area
         {
             id: 3,
-            image: "page3.jpg",
+            image: "page3.svg",
             description: "Picnic area with tables, blankets, and food",
             narratorIntro: "Everyone has gathered at the picnic area for lunch! Who would you like to see now?",
             isChoicePoint: true,

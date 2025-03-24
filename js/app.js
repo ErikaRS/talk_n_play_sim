@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update the page image
         // In a real implementation, we'd have actual images. For this prototype,
         // we'll use a placeholder or generate a simple visual
-        pageImage.src = `public/images/${page.image}`;
+        pageImage.src = `./public/images/${page.image}`;
         pageImage.alt = page.description;
         
         // Set if we're at a choice point
