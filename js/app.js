@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const narratorText = document.getElementById('narrator-text');
     const narratorSpeakBtn = document.getElementById('narrator-speak');
     const pageImage = document.getElementById('page-image');
-    const characterButtons = document.querySelectorAll('.character-btn');
+    const selectionButtons = document.querySelectorAll('.selection-btn');
     const prevPageBtn = document.getElementById('prev-page');
     const nextPageBtn = document.getElementById('next-page');
     
@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Set up event listeners
     function setupEventListeners() {
-        // Character button listeners
-        characterButtons.forEach(button => {
+        // Selection button listeners
+        selectionButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const character = button.getAttribute('data-character');
-                selectCharacter(character);
+                const color = button.id;
+                selectColor(color);
             });
         });
         
@@ -50,22 +50,29 @@ document.addEventListener('DOMContentLoaded', () => {
         nextPageBtn.addEventListener('click', goToNextPage);
     }
     
-    // Select a character track
-    function selectCharacter(character) {
+    // Select a color track
+    function selectColor(color) {
         // Clear any existing timeout
         if (choiceTimeout) {
             clearTimeout(choiceTimeout);
             choiceTimeout = null;
         }
         
-        // Update the current character
-        currentCharacter = character;
-        characterHistory[currentPage - 1] = character;
+        // Update the current character based on color
+        // Map colors to characters from the story data
+        const colorToCharacter = {
+            yellow: "Big Bird",
+            red: "Elmo",
+            blue: "Cookie Monster",
+            green: "Oscar"
+        };
         
-        // Highlight the selected character button
-        characterButtons.forEach(button => {
-            const buttonCharacter = button.getAttribute('data-character');
-            if (buttonCharacter === character) {
+        currentCharacter = colorToCharacter[color];
+        characterHistory[currentPage - 1] = currentCharacter;
+        
+        // Highlight the selected button
+        selectionButtons.forEach(button => {
+            if (button.id === color) {
                 button.classList.add('active');
             } else {
                 button.classList.remove('active');
@@ -73,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         // Play character sound
-        playCharacterSound(character);
+        playCharacterSound(currentCharacter);
         
         // Update the display with selected character track
         updateStoryDisplay();
@@ -107,10 +114,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (previousCharacter) {
             currentCharacter = previousCharacter;
             
-            // Highlight the previously selected character
-            characterButtons.forEach(button => {
-                const buttonCharacter = button.getAttribute('data-character');
-                if (buttonCharacter === previousCharacter) {
+            // Highlight the previously selected color button
+            // Map character back to color
+            const characterToColor = {
+                "Big Bird": "yellow",
+                "Elmo": "red",
+                "Cookie Monster": "blue",
+                "Oscar": "green"
+            };
+            
+            const selectedColor = characterToColor[previousCharacter];
+            
+            selectionButtons.forEach(button => {
+                if (button.id === selectedColor) {
                     button.classList.add('active');
                 } else {
                     button.classList.remove('active');
@@ -121,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateStoryDisplay();
         } else {
             // No previous selection, reset display
-            characterButtons.forEach(button => button.classList.remove('active'));
+            selectionButtons.forEach(button => button.classList.remove('active'));
             currentCharacter = null;
             
             // Start timeout for default selection
@@ -235,7 +251,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (characterHistory.length > 0) {
                 const lastCharacter = characterHistory.filter(c => c).pop();
                 if (lastCharacter && !currentCharacter) {
-                    selectCharacter(lastCharacter);
+                    // Map character back to color
+                    const characterToColor = {
+                        "Big Bird": "yellow",
+                        "Elmo": "red",
+                        "Cookie Monster": "blue",
+                        "Oscar": "green"
+                    };
+                    
+                    selectColor(characterToColor[lastCharacter]);
                 }
             }
         }, storyData.defaultTimeoutSeconds * 1000);

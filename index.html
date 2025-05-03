@@ -10,37 +10,28 @@
     <div class="container">
         <header>
             <h1>Sesame Street Talk 'n Play</h1>
-            <div class="narrator-container">
-                <p id="narrator-text">Welcome to our story! Choose a character to begin.</p>
-                <button id="narrator-speak">🔊</button>
-            </div>
         </header>
         
         <div class="main-content">
             <div class="book-container">
+                <div class="narrator-container">
+                    <p id="narrator-text">Welcome to our story! Choose a character to begin.</p>
+                    <button id="narrator-speak">🔊</button>
+                </div>
                 <div id="page-image-container">
                     <img id="page-image" src="./public/images/page1.svg" alt="Story page illustration">
                 </div>
+                <div class="story-text" id="story-text"></div>
             </div>
             
             <div class="controls">
-                <div class="character-buttons">
-                    <button class="character-btn" id="yellow" data-character="Big Bird">
-                        <span class="character-icon">🟡</span>
-                        <span class="character-name">Big Bird</span>
-                    </button>
-                    <button class="character-btn" id="red" data-character="Elmo">
-                        <span class="character-icon">🔴</span>
-                        <span class="character-name">Elmo</span>
-                    </button>
-                    <button class="character-btn" id="blue" data-character="Cookie Monster">
-                        <span class="character-icon">🔵</span>
-                        <span class="character-name">Cookie Monster</span>
-                    </button>
-                    <button class="character-btn" id="green" data-character="Oscar">
-                        <span class="character-icon">🟢</span>
-                        <span class="character-name">Oscar</span>
-                    </button>
+                <div class="selection-buttons-container">
+                    <div class="selection-buttons">
+                        <button class="selection-btn" id="yellow"></button>
+                        <button class="selection-btn" id="red"></button>
+                        <button class="selection-btn" id="blue"></button>
+                        <button class="selection-btn" id="green"></button>
+                    </div>
                 </div>
                 
                 <div class="navigation-buttons">
