@@ -6,16 +6,16 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e6e7ee;
+    background-color: #95988f;
     color: #333;
     line-height: 1.6;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 30px;
-    background-color: #e6e7ee;
+    background-color: #fff;
     min-height: 100vh;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -23,10 +23,10 @@ body {
 header {
     text-align: center;
     margin-bottom: 30px;
-    background-color: #e6e7ee;
+    background-color: #bec1b6;
     padding: 20px;
     border-radius: 16px;
-    box-shadow: 7px 7px 14px #c8c9d9, 
+    box-shadow: 7px 7px 14px #9a9c94, 
                -7px -7px 14px #ffffff;
 }
 
@@ -66,7 +66,7 @@ header h1 {
     cursor: pointer;
     margin-left: 15px;
     transition: all 0.2s;
-    box-shadow: 5px 5px 10px #c8c9d9, 
+    box-shadow: 5px 5px 10px #9a9c94, 
                -5px -5px 10px #ffffff;
 }
 
@@ -75,7 +75,7 @@ header h1 {
 }
 
 #narrator-speak:active {
-    box-shadow: inset 3px 3px 6px #c8c9d9,
+    box-shadow: inset 3px 3px 6px #9a9c94,
                 inset -3px -3px 6px #ffffff;
 }
 
@@ -83,11 +83,12 @@ header h1 {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    background-color: #e6e7ee;
-    border-radius: 20px 20px 0 0;
-    box-shadow: inset 8px 8px 16px #c8c9d9, 
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 16px #9a9c94, 
                 inset -8px -8px 16px #ffffff;
-    margin-bottom: 0;
+    margin-bottom: 25px;
+    min-height: 600px; /* Increased height to show all content */
 }
 
 .book-container {
@@ -97,9 +98,10 @@ header h1 {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     position: relative;
     margin-top: 10px;
-    overflow: hidden;
+    overflow: auto;
     z-index: 1;
     transform: translateY(-5px);
+    max-height: 100%;
 }
 
 #page-image-container {
@@ -107,7 +109,7 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
+    min-height: 450px;
     position: relative;
     background-color: #fff5db;
     padding: 10px 0;
@@ -138,22 +140,25 @@ header h1 {
 
 .controls {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: #e6e7ee;
-    padding: 20px 15px 15px;
-    margin-top: 0;
-    border-radius: 0 0 20px 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
     position: relative;
-    z-index: 0;
-    box-shadow: 6px 6px 12px #c8c9d9,
+    box-shadow: 6px 6px 12px #9a9c94,
               -6px -6px 12px #ffffff;
+    height: 240px; /* Set to accommodate the larger buttons */
+    width: 100%; /* Ensure it's wide enough for all buttons */
+    overflow: visible; /* Prevent overflow clipping */
 }
 
 .selection-buttons-container {
-    margin-bottom: 25px;
-    width: 356px;  /* 80px × 4 buttons + 8px × 3 gaps between buttons */
     margin: 0 auto;
+    flex: 1 1 auto;
+    width: 480px; /* Fixed width for 4 buttons × 120px each */
+    min-width: 480px; /* Ensure minimum width fits all buttons */
 }
 
 /* Label container removed */
@@ -164,22 +169,22 @@ header h1 {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 0;
     padding: 0;
-    margin-top: 0;
+    margin: 0 auto;
     background-color: transparent;
+    width: 100%;
 }
 
 .selection-btn {
     padding: 0;
     border: none;
-    border-radius: 6px;
-    box-shadow: 6px 6px 10px rgba(0,0,0,0.2), 
-                -6px -6px 10px rgba(255,255,255,0.3);
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     cursor: pointer;
     transition: all 0.1s;
-    width: 80px;
-    height: 160px;
+    width: 120px;
+    height: 200px;
     position: relative;
     top: 0;
     margin: 0;
@@ -202,7 +207,7 @@ header h1 {
 /* Character name removed */
 
 #yellow {
-    background-color: #fdd835;
+    background-color: #ffd600;
 }
 
 #red {
@@ -220,37 +225,39 @@ header h1 {
 .navigation-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-    padding: 0 10px;
+    width: auto;
+    padding: 0 15px;
+    flex: 0 0 auto;
+    min-width: 150px;
 }
 
 .navigation-buttons button {
-    background-color: #e6e7ee;
-    color: #333;
+    background-color: #95988f;
+    color: #fff;
     border: none;
-    border-radius: 12px;
+    border-radius: 6px;
     padding: 12px 25px;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.2s;
-    box-shadow: 5px 5px 10px #c8c9d9, 
-               -5px -5px 10px #ffffff;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
 }
 
 .navigation-buttons button:hover:not(:disabled) {
-    background-color: #e6e7ee;
+    background-color: #83867e;
 }
 
 .navigation-buttons button:active:not(:disabled) {
-    box-shadow: inset 3px 3px 6px #c8c9d9,
-                inset -3px -3px 6px #ffffff;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5);
+    background-color: #333;
 }
 
 .navigation-buttons button:disabled {
-    background-color: #e0e0e0;
-    color: #a0a0a0;
+    background-color: #777;
+    color: #aaa;
     box-shadow: none;
     cursor: not-allowed;
+    opacity: 0.6;
 }
 
 #restart-btn {
@@ -263,7 +270,7 @@ header h1 {
     cursor: pointer;
     transition: all 0.2s;
     margin: 0 auto;
-    box-shadow: 5px 5px 10px #c8c9d9, 
+    box-shadow: 5px 5px 10px #9a9c94, 
                -5px -5px 10px #ffffff;
 }
 
@@ -272,7 +279,7 @@ header h1 {
 }
 
 #restart-btn:active {
-    box-shadow: inset 3px 3px 6px #c8c9d9,
+    box-shadow: inset 3px 3px 6px #9a9c94,
                 inset -3px -3px 6px #ffffff;
 }
 
@@ -280,11 +287,11 @@ footer {
     text-align: center;
     margin-top: 30px;
     padding: 20px;
-    color: #777;
+    color: #666;
     border-top: none;
     border-radius: 12px;
-    background-color: #e6e7ee;
-    box-shadow: inset 3px 3px 6px #c8c9d9,
+    background-color: #bec1b6;
+    box-shadow: inset 3px 3px 6px #9a9c94,
                 inset -3px -3px 6px #ffffff;
 }
 
