@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 30px;
     background-color: #fff;
@@ -47,6 +47,7 @@ header h1 {
     align-items: center;
     justify-content: space-between;
     border-bottom: none;
+    position: relative;
 }
 
 #narrator-text {
@@ -102,6 +103,14 @@ header h1 {
     z-index: 1;
     transform: translateY(-5px);
     max-height: 100%;
+    width: 100%;
+}
+
+.book-spread {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
 }
 
 #page-image-container {
@@ -113,6 +122,15 @@ header h1 {
     position: relative;
     background-color: #fff5db;
     padding: 10px 0;
+    flex: 1;
+    border-right: 2px solid #d9caab;
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
 }
 
 #page-image {
@@ -128,14 +146,17 @@ header h1 {
     background-color: #fff5db;
     padding: 15px;
     border-radius: 0 0 8px 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
-    min-height: 80px;
-    max-height: 150px;
+    min-height: 300px;
+    max-height: 350px;
     overflow-y: auto;
     border: none;
     margin-top: 0;
     border-top: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .controls {

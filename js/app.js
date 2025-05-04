@@ -164,19 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const track = page.tracks[currentCharacter];
         
         if (track) {
-            // Create a text node in the book container to display the story
-            const storyDisplay = document.createElement('div');
-            storyDisplay.className = 'story-text';
-            storyDisplay.textContent = track.text;
-            
-            // Clear any existing story text
-            const existingStoryText = document.querySelector('.story-text');
-            if (existingStoryText) {
-                existingStoryText.remove();
+            // Update the story text content
+            const storyTextElement = document.getElementById('story-text');
+            if (storyTextElement) {
+                storyTextElement.textContent = track.text;
             }
-            
-            // Add the new story text
-            document.getElementById('page-image-container').appendChild(storyDisplay);
             
             // Update narrator text to follow-up
             narratorText.textContent = track.narratorFollowUp;
