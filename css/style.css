@@ -27,13 +27,13 @@ body {
 
 .content {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #2a5b96;
+    top: 35px;
+    left: 220px;
+    color: #415b7b;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -60,8 +60,14 @@ h1 {
               -8px -8px 15px rgba(255, 255, 255, 0.5);
 }
 
-/* Navigation buttons */
-.nav-btn {
+.color-btn:hover {
+    filter: brightness(1.05);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15),
+              -8px -8px 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Control buttons */
+.cntrl-btn {
     position: absolute;
     width: 70px;
     height: 170px;
@@ -80,15 +86,23 @@ h1 {
     padding-bottom: 20px;
 }
 
-.nav-btn:active {
+.cntrl-btn:hover {
+    filter: brightness(1.08);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15),
+              -8px -8px 15px rgba(255, 255, 255, 0.6);
+    color: white;
+}
+
+.cntrl-btn:active {
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
               inset -5px -5px 10px rgba(255, 255, 255, 0.5);
     filter: brightness(0.97);
 }
 
 /* Default positions - adjust these manually */
-#nav-left { left: 625px; top: 725px; }
-#nav-right { left: 705px; top: 725px; }
+#nav-left { left: 795px; top: 725px; }
+#nav-sound { left: 875px; top: 725px; }
+#nav-right { left: 955px; top: 725px; }
 #green { left: 1125px; top: 725px; }
 #yellow { left: 1275px; top: 725px; }
 #red { left: 1425px; top: 725px; }
