@@ -11,7 +11,7 @@ body {
     overflow: hidden;
     background-image: url('../public/images/background.png');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
 }
 
@@ -27,8 +27,8 @@ body {
 
 .content {
     position: absolute;
-    top: 35px;
-    left: 220px;
+    top: 5px;
+    left: 150px;
     color: #415b7b;
 }
 
@@ -100,13 +100,13 @@ h1 {
 }
 
 /* Default positions - adjust these manually */
-#nav-left { left: 795px; top: 725px; }
-#nav-sound { left: 875px; top: 725px; }
-#nav-right { left: 955px; top: 725px; }
-#green { left: 1125px; top: 725px; }
-#yellow { left: 1275px; top: 725px; }
-#red { left: 1425px; top: 725px; }
-#blue { left: 1575px; top: 725px; }
+#nav-left { left: 795px; top: 750px; }
+#nav-sound { left: 875px; top: 750px; }
+#nav-right { left: 955px; top: 750px; }
+#green { left: 1125px; top: 750px; }
+#yellow { left: 1275px; top: 750px; }
+#red { left: 1425px; top: 750px; }
+#blue { left: 1575px; top: 750px; }
 
 .color-btn:active, .color-btn.active {
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
