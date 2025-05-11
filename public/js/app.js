@@ -1,19 +1,46 @@
 // Script to load story content and handle button interactions
 document.addEventListener('DOMContentLoaded', () => {
+    // DOM elements
     const colorButtons = document.querySelectorAll('.color-btn');
     const leftPage = document.querySelector('.left-page');
+    const rightPage = document.querySelector('.right-page');
+    const navLeftBtn = document.getElementById('nav-left');
+    const navRightBtn = document.getElementById('nav-right');
+    
+    // Story state
+    let storyData = null;
+    let currentPageIndex = 0;
     
     // Load story content from markdown file
     loadStoryContent();
     
-    colorButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            colorButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to the clicked button
-            button.classList.add('active');
+    // Initialize button listeners
+    initializeButtons();
+    
+    function initializeButtons() {
+        // Color button listeners
+        colorButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                colorButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to the clicked button
+                button.classList.add('active');
+                
+                // Handle color button actions based on button ID
+                const buttonId = button.id;
+                // This will be implemented later
+            });
         });
-    });
+        
+        // Navigation button listeners
+        navLeftBtn.addEventListener('click', () => {
+            // Previous page functionality will be implemented later
+        });
+        
+        navRightBtn.addEventListener('click', () => {
+            // Next page functionality will be implemented later
+        });
+    }
     
     // Function to load and parse the story content
     async function loadStoryContent() {
@@ -24,22 +51,55 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             const markdown = await response.text();
-            const storyStructure = parseMarkdownToStructure(markdown);
+            storyData = parseMarkdownToStructure(markdown);
             
             // Log the parsed structure to console
-            console.log('Parsed Story Structure:', storyStructure);
+            console.log('Parsed Story Structure:', storyData);
             
-            // Display the fixed text from the first page
-            if (storyStructure && storyStructure.pages.length > 0) {
-                const firstPage = storyStructure.pages[0];
-                leftPage.innerHTML = `<p>${firstPage.fixedText}</p>`;
-            } else {
-                leftPage.innerHTML = '<p>Story content could not be loaded.</p>';
-            }
+            // Display the first page
+            displayCurrentPage();
         } catch (error) {
             console.error('Error loading story:', error);
             leftPage.innerHTML = '<p>Error loading story content.</p>';
         }
+    }
+    
+    // Function to display the current page based on currentPageIndex
+    function displayCurrentPage() {
+        if (!storyData || !storyData.pages || storyData.pages.length === 0) {
+            leftPage.innerHTML = '<p>Story content could not be loaded.</p>';
+            return;
+        }
+        
+        if (currentPageIndex < 0 || currentPageIndex >= storyData.pages.length) {
+            console.error('Invalid page index:', currentPageIndex);
+            return;
+        }
+        
+        const currentPage = storyData.pages[currentPageIndex];
+        
+        // Update text content
+        leftPage.innerHTML = `<p>${currentPage.fixedText}</p>`;
+        
+        // Update image if available
+        if (currentPage.image) {
+            const imagePath = `/stories/The_Great_Playground_Mystery/${currentPage.image}`;
+            rightPage.innerHTML = `<img src="${imagePath}" alt="Page ${currentPage.pageNumber} image">`;
+        } else {
+            rightPage.innerHTML = '';
+        }
+        
+        // Update UI state based on navigation availability
+        updateNavigationState();
+    }
+    
+    // Function to update the navigation buttons state
+    function updateNavigationState() {
+        // Disable prev button if we're on the first page
+        navLeftBtn.disabled = currentPageIndex <= 0;
+        
+        // Disable next button if we're on the last page
+        navRightBtn.disabled = currentPageIndex >= storyData.pages.length - 1;
     }
     
     // Function to parse the markdown into a structured object
