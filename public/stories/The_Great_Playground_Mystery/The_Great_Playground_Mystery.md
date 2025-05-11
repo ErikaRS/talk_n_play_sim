@@ -18,16 +18,16 @@ Select **yellow** to check near the sandbox where Sadie Spot had been drawing in
 Select **red** to look around the clearing for clues.  
 Select **blue** to call everyone together and ask for help.
 
-#### Green  
+### Green  
 Spring wagged her tail. “I didn’t see anything — but I did hear squeaky wheels rolling away really early this morning!”
 
-#### Yellow  
+### Yellow  
 Sadie Spot tilted her head. “Hmm, I saw a trail of sparkly leaves headed into the trees... It looked like something big was dragged!”
 
-#### Red  
+### Red  
 Carrot noticed a line of tiny acorn caps, all crushed in a row — like something heavy had passed through. A clue?
 
-#### Blue  
+### Blue  
 Rosie, Spring, and Sadie Spot gathered quickly. “Let’s solve this mystery together!” said Rosie, adjusting her flower crown.
 
 ---
@@ -48,16 +48,16 @@ Select **yellow** to send Spring ahead — she’s the fastest.
 Select **red** to search the bushes together.  
 Select **blue** to climb a tree for a better view.
 
-#### Green  
+### Green  
 Sadie Spot's nose twitched. “Something big and metal went that way. Also... maple syrup?” she added, puzzled.
 
-#### Yellow  
+### Yellow  
 Spring dashed ahead and barked. “There’s something shiny stuck between two trees! Come quick!”
 
-#### Red  
+### Red  
 Behind the bushes, Rosie found a tangled vine and what looked like part of the slide’s ladder!
 
-#### Blue  
+### Blue  
 Carrot climbed up and saw faint tracks leading toward the creek. Something big had definitely passed through.
 
 ---
@@ -77,16 +77,16 @@ Select **yellow** to offer to help the squirrel build a new ramp.
 Select **red** to gently take the slide back.  
 Select **blue** to ask if the squirrel saw who helped him move it.
 
-#### Green  
+### Green  
 “Oh!” said the squirrel. “I didn’t know! Of course you can take it back!”
 
-#### Yellow  
+### Yellow  
 “You’d help?” The squirrel's eyes sparkled. “Okay! Let’s return the slide and build a better ramp together!”
 
-#### Red  
+### Red  
 The squirrel stepped aside politely. “Sorry again. I didn’t mean to cause trouble.”
 
-#### Blue  
+### Blue  
 “A big deer helped me carry it!” said the squirrel. “But not Rosie... someone with glowing antlers…”
 
 ---
@@ -107,16 +107,16 @@ Select **yellow** to look in the garden where Rosie had been earlier.
 Select **red** to ask the forest owl — he sees everything.  
 Select **blue** to retrace their steps for more clues.
 
-#### Green  
+### Green  
 At the art wall, Spring had indeed borrowed the ladder to paint a tall tree. “Oops! I forgot to return it!”
 
-#### Yellow  
+### Yellow  
 In the garden, Rosie spotted paint footprints and a flower petal path... leading back to the art wall.
 
-#### Red  
+### Red  
 The owl hooted from his branch. “The ladder? Last I saw, it was near the painting meadow!”
 
-#### Blue  
+### Blue  
 Along the trail, they found paint smudges and a broken crayon. “Looks like someone went to the art wall,” said Sadie.
 
 ---
@@ -137,16 +137,16 @@ Select **yellow** to clean off the paint first.
 Select **red** to admire Spring’s painting.  
 Select **blue** to invite more friends to help.
 
-#### Green  
+### Green  
 They balanced the ladder carefully, giggling when Carrot nearly tipped over. “Teamwork!” Rosie cheered.
 
-#### Yellow  
+### Yellow  
 Sadie Spot dipped a sponge in the creek and wiped off the paint. “Now it’s like new!”
 
-#### Red  
+### Red  
 Spring had painted all four of them on the slide. “This is beautiful,” said Rosie softly.
 
-#### Blue  
+### Blue  
 More forest friends arrived. “Can we help?” chirped a chipmunk. The ladder was returned in no time!
 
 ---
@@ -167,16 +167,16 @@ Select **yellow** to put on a silly play.
 Select **red** to build a fort under the jungle gym.  
 Select **blue** to have a forest picnic.
 
-#### Green  
+### Green  
 Carrot zoomed down first, ears flying! “Wheee!” Sadie giggled all the way down after him.
 
-#### Yellow  
+### Yellow  
 Rosie made a flower crown for Sadie, who declared herself Queen of Slides. Everyone acted in the royal play!
 
-#### Red  
+### Red  
 Spring dug a cozy tunnel under the gym. “This is our new clubhouse!” she yipped.
 
-#### Blue  
+### Blue  
 They set out berries, cookies, and acorn muffins. “Best snack ever!” said Carrot with a full mouth.
 
 ---
@@ -197,16 +197,16 @@ Select **yellow** to invent a new game.
 Select **red** to draw the mystery in the dirt.  
 Select **blue** to bury a time capsule.
 
-#### Green  
+### Green  
 “Bunny bounce, kitten paw, deer stomp, puppy tail wag!” said Spring. They all laughed and did it twice more.
 
-#### Yellow  
+### Yellow  
 They invented “Slide Tag” — whoever slid down had to chase the others! Carrot was very fast.
 
-#### Red  
+### Red  
 Sadie Spot sketched the trail of clues, the squirrel’s cart, and the whole gang. “Now we’ll always remember,” she said.
 
-#### Blue  
+### Blue  
 They buried a treasure box with drawings, a bolt from the slide, and a note: “To future playground adventurers — have fun!”
 
 ---
@@ -227,18 +227,18 @@ Select **yellow** to share favorite moments.
 Select **red** to plan tomorrow’s adventures.  
 Select **blue** to whisper goodnight wishes.
 
-#### Green  
+### Green  
 They lay on their backs and counted the stars. “That one looks like a bunny,” whispered Sadie.
 
-#### Yellow  
+### Yellow  
 “Best part?” said Spring. “Zooming down the slide!”  
 “Teamwork,” said Rosie. “Definitely teamwork.”
 
-#### Red  
+### Red  
 “Let’s build a zipline next!” said Carrot, eyes sparkling.  
 “Maybe after a nap,” yawned Sadie.
 
-#### Blue  
+### Blue  
 “Goodnight, friends,” whispered Carrot. “Goodnight, slide. Goodnight, sparkly trail.”
 
 ---
@@ -259,16 +259,16 @@ Select **yellow** to tell a gentle bedtime tale.
 Select **red** to hum a lullaby together.  
 Select **blue** to each say what they’re thankful for.
 
-#### Green  
+### Green  
 Rosie brought out her softest mossy blanket. “It smells like the forest,” she smiled.
 
-#### Yellow  
+### Yellow  
 Sadie whispered a tale of a moonbeam that turned into a slide. Everyone sighed dreamily.
 
-#### Red  
+### Red  
 Spring hummed the tune from earlier. Soon they were all humming along, eyes drifting closed.
 
-#### Blue  
+### Blue  
 “I’m thankful for clues,” said Carrot. “And friends,” added Rosie. “And art!” said Spring. “And cozy endings,” murmured Sadie.
 
 ---
@@ -289,16 +289,16 @@ Select **yellow** to imagine building a rocket swing.
 Select **red** to dream of future mysteries.  
 Select **blue** to drift into peaceful sleep.
 
-#### Green  
+### Green  
 In their dreams, they soared down rainbow slides into candy clouds. “Wheeee!”
 
-#### Yellow  
+### Yellow  
 Spring barked happily in her sleep, dreaming of a rocket ship with a slide launcher.
 
-#### Red  
+### Red  
 Carrot imagined sparkly footprints, secret tree doors, and giggling clues waiting in the shadows.
 
-#### Blue  
+### Blue  
 Snuggled together, the friends sighed in unison. Maple Hollow slept — and so did its heroes.
 
 
