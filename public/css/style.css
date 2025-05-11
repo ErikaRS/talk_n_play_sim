@@ -20,9 +20,10 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('../public/images/background.png');
-    background-repeat: no-repeat; 
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
     background-position: 0px 30px;
+    z-index: 0; /* Ensure background is behind other content */
 }
 
 .content {
