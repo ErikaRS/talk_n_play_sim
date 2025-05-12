@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function renderPageContent(page) {
-        // Render text content
-        elements.leftPage.innerHTML = `<p>${page.fixedText}</p>`;
+        // Render text content with markdown formatting
+        elements.leftPage.innerHTML = `<p>${parseMarkdown(page.fixedText)}</p>`;
         
         // Render image if available
         if (page.image) {
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const displayColorName = color.charAt(0).toUpperCase() + color.slice(1);
         
         // Replace any existing text with fixed text + colored text with colored name prefix
-        elements.leftPage.innerHTML = `<p>${page.fixedText}</p><p class="color-text"><span class="${color}-color">${displayColorName}</span>: ${coloredText}</p>`;
+        elements.leftPage.innerHTML = `<p>${parseMarkdown(page.fixedText)}</p><p class="color-text"><span class="${color}-color">${displayColorName}</span>: ${parseMarkdown(coloredText)}</p>`;
     }
     
     function updateNavigationState() {
@@ -142,6 +142,28 @@ document.addEventListener('DOMContentLoaded', () => {
     function showErrorMessage(message) {
         elements.leftPage.innerHTML = `<p>${message}</p>`;
         elements.rightPage.innerHTML = '';
+    }
+    
+    /**
+     * Parse basic markdown text to HTML
+     * @param {string} text - The markdown text to parse
+     * @returns {string} - HTML formatted text
+     */
+    function parseMarkdown(text) {
+        if (!text) return '';
+        
+        let html = text;
+        
+        // Replace newlines with <br>
+        html = html.replace(/\n/g, '<br>');
+        
+        // Replace bold (**text**) with <strong>text</strong>
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        
+        // Replace italic (*text*) with <em>text</em>
+        html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+        
+        return html;
     }
     
     // Parse markdown story file into structured object
