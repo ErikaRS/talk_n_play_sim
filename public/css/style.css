@@ -142,11 +142,25 @@ h1 {
     padding-bottom: 20px;
 }
 
+/* Disabled control buttons */
+.cntrl-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    filter: grayscale(30%);
+    box-shadow: none;
+}
+
 .cntrl-btn:hover {
     filter: brightness(1.08);
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15),
               -8px -8px 15px rgba(255, 255, 255, 0.6);
     color: white;
+}
+
+.cntrl-btn:disabled:hover {
+    filter: grayscale(30%);
+    box-shadow: none;
+    color: #e5e1de;
 }
 
 .cntrl-btn:active {

@@ -36,11 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Navigation button listeners
         elements.navPrev.addEventListener('click', () => {
-            // Will be implemented later
+            if (state.currentPageIndex > 0) {
+                state.currentPageIndex--;
+                renderCurrentPage();
+                updateNavigationState();
+            }
         });
         
         elements.navNext.addEventListener('click', () => {
-            // Will be implemented later
+            if (hasValidStory() && state.currentPageIndex < state.story.pages.length - 1) {
+                state.currentPageIndex++;
+                renderCurrentPage();
+                updateNavigationState();
+            }
         });
     }
     
@@ -131,7 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const { currentPageIndex } = state;
         const pageCount = state.story?.pages?.length || 0;
         
+        // Disable prev button at the first page
         elements.navPrev.disabled = currentPageIndex <= 0;
+        
+        // Disable next button at the last page
         elements.navNext.disabled = currentPageIndex >= pageCount - 1;
     }
     
