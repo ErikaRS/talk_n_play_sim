@@ -1,118 +1,131 @@
-// Script to load story content and handle button interactions
+// Talk 'n Play Story Simulator
 document.addEventListener('DOMContentLoaded', () => {
+    // Configuration
+    const STORY_PATH = '/stories/The_Great_Playground_Mystery/The_Great_Playground_Mystery.md';
+    
     // DOM elements
-    const colorButtons = document.querySelectorAll('.color-btn');
-    const leftPage = document.querySelector('.left-page');
-    const rightPage = document.querySelector('.right-page');
-    const navLeftBtn = document.getElementById('nav-left');
-    const navRightBtn = document.getElementById('nav-right');
+    const elements = {
+        colorButtons: document.querySelectorAll('.color-btn'),
+        leftPage: document.querySelector('.left-page'),
+        rightPage: document.querySelector('.right-page'),
+        navPrev: document.getElementById('nav-left'),
+        navNext: document.getElementById('nav-right'),
+        navSound: document.getElementById('nav-sound')
+    };
     
     // Story state
-    let storyData = null;
-    let currentPageIndex = 0;
+    const state = {
+        story: null,
+        currentPageIndex: 0
+    };
     
-    // Load story content from markdown file
-    loadStoryContent();
+    // Initialize the application
+    init();
     
-    // Initialize button listeners
-    initializeButtons();
+    function init() {
+        loadStory(STORY_PATH);
+        setupEventListeners();
+    }
     
-    function initializeButtons() {
+    function setupEventListeners() {
         // Color button listeners
-        colorButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                colorButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to the clicked button
-                button.classList.add('active');
-                
-                // Handle color button actions based on button ID
-                const buttonId = button.id;
-                // This will be implemented later
-            });
+        elements.colorButtons.forEach(button => {
+            button.addEventListener('click', () => handleColorButtonClick(button));
         });
         
         // Navigation button listeners
-        navLeftBtn.addEventListener('click', () => {
-            // Previous page functionality will be implemented later
+        elements.navPrev.addEventListener('click', () => {
+            // Will be implemented later
         });
         
-        navRightBtn.addEventListener('click', () => {
-            // Next page functionality will be implemented later
+        elements.navNext.addEventListener('click', () => {
+            // Will be implemented later
         });
     }
     
-    // Function to load and parse the story content
-    async function loadStoryContent() {
+    function handleColorButtonClick(button) {
+        // Update button states
+        elements.colorButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Color-specific functionality will be added later
+    }
+    
+    async function loadStory(storyPath) {
         try {
-            const response = await fetch('/stories/The_Great_Playground_Mystery/The_Great_Playground_Mystery.md');
+            const response = await fetch(storyPath);
             if (!response.ok) {
-                throw new Error(`Failed to load story content: ${response.status}`);
+                throw new Error(`Failed to load story: ${response.status}`);
             }
             
             const markdown = await response.text();
-            storyData = parseMarkdownToStructure(markdown);
+            state.story = parseMarkdownToStory(markdown);
             
-            // Log the parsed structure to console
-            console.log('Parsed Story Structure:', storyData);
-            
-            // Display the first page
-            displayCurrentPage();
+            renderCurrentPage();
         } catch (error) {
             console.error('Error loading story:', error);
-            leftPage.innerHTML = '<p>Error loading story content.</p>';
+            showErrorMessage('Failed to load story content');
         }
     }
     
-    // Function to display the current page based on currentPageIndex
-    function displayCurrentPage() {
-        if (!storyData || !storyData.pages || storyData.pages.length === 0) {
-            leftPage.innerHTML = '<p>Story content could not be loaded.</p>';
+    function renderCurrentPage() {
+        if (!hasValidStory()) {
+            showErrorMessage('Story content could not be loaded');
             return;
         }
         
-        if (currentPageIndex < 0 || currentPageIndex >= storyData.pages.length) {
-            console.error('Invalid page index:', currentPageIndex);
+        const pageIndex = state.currentPageIndex;
+        if (pageIndex < 0 || pageIndex >= state.story.pages.length) {
+            console.error('Invalid page index:', pageIndex);
             return;
         }
         
-        const currentPage = storyData.pages[currentPageIndex];
-        
-        // Update text content
-        leftPage.innerHTML = `<p>${currentPage.fixedText}</p>`;
-        
-        // Update image if available
-        if (currentPage.image) {
-            const imagePath = `/stories/The_Great_Playground_Mystery/${currentPage.image}`;
-            rightPage.innerHTML = `<img src="${imagePath}" alt="Page ${currentPage.pageNumber} image">`;
-        } else {
-            rightPage.innerHTML = '';
-        }
-        
-        // Update UI state based on navigation availability
+        const currentPage = state.story.pages[pageIndex];
+        renderPageContent(currentPage);
         updateNavigationState();
     }
     
-    // Function to update the navigation buttons state
-    function updateNavigationState() {
-        // Disable prev button if we're on the first page
-        navLeftBtn.disabled = currentPageIndex <= 0;
+    function renderPageContent(page) {
+        // Render text content
+        elements.leftPage.innerHTML = `<p>${page.fixedText}</p>`;
         
-        // Disable next button if we're on the last page
-        navRightBtn.disabled = currentPageIndex >= storyData.pages.length - 1;
+        // Render image if available
+        if (page.image) {
+            const imagePath = `/stories/The_Great_Playground_Mystery/${page.image}`;
+            elements.rightPage.innerHTML = `<img src="${imagePath}" alt="Page ${page.pageNumber} image">`;
+        } else {
+            elements.rightPage.innerHTML = '';
+        }
     }
     
-    // Function to parse the markdown into a structured object
-    function parseMarkdownToStructure(markdown) {
+    function updateNavigationState() {
+        const { currentPageIndex } = state;
+        const pageCount = state.story?.pages?.length || 0;
+        
+        elements.navPrev.disabled = currentPageIndex <= 0;
+        elements.navNext.disabled = currentPageIndex >= pageCount - 1;
+    }
+    
+    function hasValidStory() {
+        return state.story && Array.isArray(state.story.pages) && state.story.pages.length > 0;
+    }
+    
+    function showErrorMessage(message) {
+        elements.leftPage.innerHTML = `<p>${message}</p>`;
+        elements.rightPage.innerHTML = '';
+    }
+    
+    // Parse markdown story file into structured object
+    function parseMarkdownToStory(markdown) {
         const storyStructure = {
-            storyTitle: '',
+            title: '',
             pages: []
         };
         
         // Extract story title
         const titleMatch = markdown.match(/# Story Title\s*\n([^\n]+)/i);
         if (titleMatch && titleMatch[1]) {
-            storyStructure.storyTitle = titleMatch[1].trim();
+            storyStructure.title = titleMatch[1].trim();
         }
         
         // Split by page sections
