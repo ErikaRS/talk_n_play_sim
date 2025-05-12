@@ -168,7 +168,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Replace newlines with <br>
         html = html.replace(/\n/g, '<br>');
         
-        // Replace bold (**text**) with <strong>text</strong>
+        // Replace color-specific bold text with colored text
+        html = html.replace(/\*\*(green)\*\*/gi, '<strong class="green-color">$1</strong>');
+        html = html.replace(/\*\*(yellow)\*\*/gi, '<strong class="yellow-color">$1</strong>');
+        html = html.replace(/\*\*(red)\*\*/gi, '<strong class="red-color">$1</strong>');
+        html = html.replace(/\*\*(blue)\*\*/gi, '<strong class="blue-color">$1</strong>');
+        
+        // Replace remaining bold (**text**) with <strong>text</strong>
         html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         
         // Replace italic (*text*) with <em>text</em>
