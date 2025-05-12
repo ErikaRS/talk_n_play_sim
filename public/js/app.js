@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Story state
     const state = {
         story: null,
-        currentPageIndex: 0
+        currentPageIndex: 0,
+        activeColor: null
     };
     
     // Initialize the application
@@ -48,7 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.colorButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         
-        // Color-specific functionality will be added later
+        // Get the color from the button id
+        const color = button.id;
+        state.activeColor = color;
+        
+        // Update the page content with the selected color's text
+        if (hasValidStory()) {
+            const currentPage = state.story.pages[state.currentPageIndex];
+            renderPageWithColoredText(currentPage, color);
+        }
     }
     
     async function loadStory(storyPath) {
@@ -96,6 +105,26 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             elements.rightPage.innerHTML = '';
         }
+        
+        // Reset active color when changing pages
+        state.activeColor = null;
+        elements.colorButtons.forEach(btn => btn.classList.remove('active'));
+    }
+    
+    function renderPageWithColoredText(page, color) {
+        if (!page || !color) return;
+        
+        // Get the colored text content
+        const coloredText = page[color];
+        
+        // If there's no text for this color, do nothing
+        if (!coloredText) return;
+        
+        // Format the color name for display (capitalize first letter)
+        const displayColorName = color.charAt(0).toUpperCase() + color.slice(1);
+        
+        // Replace any existing text with fixed text + colored text with colored name prefix
+        elements.leftPage.innerHTML = `<p>${page.fixedText}</p><p class="color-text"><span class="${color}-color">${displayColorName}</span>: ${coloredText}</p>`;
     }
     
     function updateNavigationState() {

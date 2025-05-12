@@ -82,6 +82,28 @@ h1 {
     /* Container for absolute positioning */
 }
 
+/* Color text styling */
+.color-text {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.green-color {
+    color: #62b6a9;
+}
+
+.yellow-color {
+    color: #c9aa42;
+}
+
+.red-color {
+    color: #e05555;
+}
+
+.blue-color {
+    color: #5b8ac7;
+}
+
 .color-btn {
     position: absolute;
     width: 140px;
