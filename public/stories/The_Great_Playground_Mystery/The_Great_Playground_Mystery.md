@@ -9,9 +9,10 @@ page1.png
 
 ### Fixed text  
 It was a sunny morning in Maple Hollow, and the friends were excited to play outside. But when Carrot the bunny arrived at the clearing, something was wrong — the slide was missing!  
+
 “Sadie Spot, Rosie, Spring!” Carrot called. “The slide is gone!”  
-He looked around the playground, ears twitching.  
-What should Carrot do first?
+
+He looked around the playground, ears twitching. What should Carrot do first?
 
 Select **green** to hop over to Spring and ask if she saw anything while digging.  
 Select **yellow** to check near the sandbox where Sadie Spot had been drawing in the dirt.  
