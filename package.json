@@ -1,0 +1,15 @@
+{
+  "name": "talk_n_play_sim",
+  "version": "1.0.0",
+  "description": "Talk 'n Play Simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/*.test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "jsdom": "^22.1.0",
+    "mocha": "^10.2.0"
+  }
+}
