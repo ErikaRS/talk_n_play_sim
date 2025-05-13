@@ -91,11 +91,22 @@ Page 2 fixed text
 Page 2 green text`
     });
     
-    // Load the app code
+    // Load the modules in order
+    const parserCode = fs.readFileSync(path.join(__dirname, '../public/js/parser.js'), 'utf8');
+    const parserScript = document.createElement('script');
+    parserScript.textContent = parserCode;
+    document.head.appendChild(parserScript);
+    
+    const rendererCode = fs.readFileSync(path.join(__dirname, '../public/js/renderer.js'), 'utf8');
+    const rendererScript = document.createElement('script');
+    rendererScript.textContent = rendererCode;
+    document.head.appendChild(rendererScript);
+    
+    // Finally load the app code
     const appCode = fs.readFileSync(path.join(__dirname, '../public/js/app.js'), 'utf8');
-    const script = document.createElement('script');
-    script.textContent = appCode;
-    document.head.appendChild(script);
+    const appScript = document.createElement('script');
+    appScript.textContent = appCode;
+    document.head.appendChild(appScript);
   });
   
   // Tests for Story content parsing and display
