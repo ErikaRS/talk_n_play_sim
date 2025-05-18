@@ -19,7 +19,8 @@ class StoryApp {
             rightPage: document.querySelector('.right-page'),
             navPrev: document.getElementById('nav-left'),
             navNext: document.getElementById('nav-right'),
-            navSound: document.getElementById('nav-sound')
+            navSound: document.getElementById('nav-sound'),
+            storyList: document.querySelector('.story-list')
         };
         
         // App state
@@ -30,12 +31,49 @@ class StoryApp {
         // Create renderer
         this.renderer = new StoryRenderer(this.elements);
         
+        // Available stories
+        this.availableStories = [
+            {
+                title: 'The Great Playground Mystery',
+                path: '/stories/The_Great_Playground_Mystery/The_Great_Playground_Mystery.md',
+                folder: '/stories/The_Great_Playground_Mystery/'
+            },
+            {
+                title: 'The Quest for the Rainbow Gem',
+                path: '/stories/The_Quest_for_the_Rainbow_Gem/The_Quest_for_the_Rainbow_Gem.md',
+                folder: '/stories/The_Quest_for_the_Rainbow_Gem/'
+            }
+        ];
+        
         this.init();
     }
     
     init() {
+        this.populateStoryPicker();
         this.setupEventListeners();
         this.loadStory(CONFIG.storyPath);
+    }
+    
+    populateStoryPicker() {
+        // Add test stories for demonstration
+        for (let i = 1; i <= 20; i++) {
+            const storyItem = document.createElement('div');
+            storyItem.className = 'story-item';
+            storyItem.textContent = `Test ${i}`;
+            storyItem.dataset.index = i;
+            
+            this.elements.storyList.appendChild(storyItem);
+        }
+        
+        // Add real stories at the end of the list
+        this.availableStories.forEach((story, index) => {
+            const storyItem = document.createElement('div');
+            storyItem.className = 'story-item real-story';
+            storyItem.textContent = story.title;
+            storyItem.dataset.index = index;
+            
+            this.elements.storyList.appendChild(storyItem);
+        });
     }
     
     setupEventListeners() {
@@ -47,6 +85,22 @@ class StoryApp {
         // Set up navigation
         this.elements.navPrev.addEventListener('click', () => this.goToPreviousPage());
         this.elements.navNext.addEventListener('click', () => this.goToNextPage());
+        
+        // Set up story picker items
+        const storyItems = document.querySelectorAll('.story-item');
+        storyItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Highlight selected item
+                document.querySelectorAll('.story-item.selected').forEach(el => {
+                    el.classList.remove('selected');
+                });
+                item.classList.add('selected');
+                
+                // In a real implementation, we would load the selected story here
+                // For now, we're just showing the selection without loading
+                console.log(`Selected: ${item.textContent}`);
+            });
+        });
     }
     
     // Helper methods

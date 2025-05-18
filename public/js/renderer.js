@@ -85,6 +85,25 @@ class StoryRenderer {
             if (activeBtn) activeBtn.classList.add('active');
         }
     }
+    
+    /**
+     * Updates the active story in the picker
+     */
+    updateStorySelection(storyTitle) {
+        if (!this.elements.storyList) return;
+        
+        const storyItems = this.elements.storyList.querySelectorAll('.story-item');
+        
+        // Clear all active selections
+        storyItems.forEach(item => {
+            item.classList.remove('selected');
+            
+            // Highlight the item if it matches the current story title
+            if (item.textContent === storyTitle) {
+                item.classList.add('selected');
+            }
+        });
+    }
 }
 
 // Export for environments with module support
