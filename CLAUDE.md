@@ -18,30 +18,21 @@ http-server -c-1 --cors
 ### Running Tests
 
 ```bash
-# Run all tests (both Mocha and Vitest)
+# Run all tests
 npm test
 
-# Run only Mocha tests
-npm run test:mocha
-
-# Run only Vitest tests
+# Run tests
 npm run test:vitest
 
-# Run a specific Mocha test file
-npx mocha tests/parser.test.js
-
-# Run a specific Vitest test file
+# Run a specific test file
 npx vitest run tests-vite/parser.test.js
 
 # Run Vitest in watch mode
 npm run test:watch
 ```
 
-> Note: The project has two complete test suites:
-> 1. Mocha/Chai tests (in the `tests/` directory) using CommonJS format
-> 2. Vitest tests (in the `tests-vite/` directory) using ES modules
->
-> Both test the same functionality but provide different examples of testing approaches.
+> Note: The project uses Vitest as its testing framework.
+> Tests are located in the `tests-vite/` directory using ES modules format.
 
 ## Architecture
 
@@ -85,18 +76,17 @@ The Talk 'n Play simulation follows this interaction pattern:
 
 ## Testing Framework
 
-The project has two testing setups:
+The project uses Vitest as its testing framework:
 
-1. **Mocha/Chai (Legacy)**: Located in `/tests`, using CommonJS modules
-2. **Vitest (New)**: Located in `/tests-vite`, using ES modules
+- **Vitest**: Located in `/tests-vite`, using ES modules
 
-Both test suites cover the same core functionality but use different syntax patterns. The test suites focus on:
+The test suite focuses on:
 
 1. **Parser Tests**: Validate the markdown parser and story/page model functionality
 2. **Renderer Tests**: Ensure UI components are correctly rendered based on story content
 3. **App Tests**: Test the integration between components and user interaction flows
 
-Both test frameworks can be run using the single `npm test` command, which will execute both test suites sequentially.
+Tests can be run using the `npm test` command or `npm run test:watch` for interactive development.
 
 ## Code Style Guide
 

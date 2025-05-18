@@ -4,8 +4,7 @@
   "description": "Talk 'n Play Simulator",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:mocha && npm run test:vitest",
-    "test:mocha": "mocha tests/*.test.js",
+    "test": "npm run test:vitest",
     "test:vitest": "npx vitest run",
     "test:watch": "npx vitest",
     "generate-story": "node scripts/generate-story.js"
@@ -13,9 +12,7 @@
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
-    "chai": "^4.3.7",
     "jsdom": "^22.1.0",
-    "mocha": "^10.2.0",
     "vite": "^6.3.5",
     "vitest": "^3.1.3"
   },
