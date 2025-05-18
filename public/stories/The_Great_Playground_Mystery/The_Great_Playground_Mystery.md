@@ -41,7 +41,9 @@ page2.png
 
 ### Fixed text  
 Following the trail of sparkly leaves and bent grass, the friends arrived at a shady glade. A few shiny bolts and some fur tufts were scattered on the ground.  
+
 Carrot twitched his nose. “We’re getting closer…”  
+
 Where should they go next?
 
 **Green**: Ask Sadie Spot to sniff out the trail.  
@@ -71,6 +73,7 @@ page3.png
 
 ### Fixed text  
 Near the creek, they found a strange sight: a squirrel’s cart loaded with shiny things — and a big red plank!  
+
 A tiny squirrel in a helmet waved at them. “Sorry! I thought it was a ramp for my acorn stunt show!”
 
 **Green**: Explain the slide belongs in the playground.  
@@ -100,7 +103,9 @@ page4.png
 
 ### Fixed text  
 Back at the playground, they returned the slide — but the ladder was still missing!  
+
 “How do we climb up now?” Carrot frowned.  
+
 Rosie tapped her hoof thoughtfully. “Maybe someone borrowed the ladder for another project…”
 
 **Green**: Check the art wall where Spring was painting yesterday.  
@@ -130,7 +135,9 @@ page5.png
 
 ### Fixed text  
 Spring beamed when she saw them. “I was decorating the wall with our playground adventures!”  
+
 The ladder leaned nearby, speckled with blue and yellow paint.  
+
 “I’m all done now. Let’s bring it back!”
 
 **Green**: Carry the ladder as a team.  
@@ -160,7 +167,9 @@ page6.png
 
 ### Fixed text  
 At last — the playground was whole again!  
+
 The slide gleamed in the sunlight, and the ladder stood tall. The friends high-fived (and high-hoofed and high-pawed).  
+
 What should they do to celebrate?
 
 **Green**: Race down the slide.  
@@ -190,7 +199,9 @@ page7.png
 
 ### Fixed text  
 The sun began to dip low.  
+
 “Let’s do one more fun thing before we go,” said Rosie, stretching.  
+
 What should their last adventure be?
 
 **Green**: Create a secret handshake.  
@@ -220,7 +231,9 @@ page8.png
 
 ### Fixed text  
 The clearing glowed gold as the sun set.  
+
 Carrot flopped down, happy and tired. Sadie curled beside him, Rosie nibbled a clover, and Spring sprawled belly-up.  
+
 “Today was perfect,” said Rosie.
 
 **Green**: Watch the stars come out.  
@@ -252,7 +265,9 @@ page9.png
 
 ### Fixed text  
 Night settled over Maple Hollow. Fireflies flickered above the playground.  
+
 The mystery was solved. The slide was home.  
+
 The four friends huddled close, feeling proud and peaceful.
 
 **Green**: Snuggle into a cozy blanket.  

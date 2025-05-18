@@ -8,10 +8,11 @@ page1.png
 
 ### Fixed text  
 In the whimsical land of Coloria, Luna the Rabbit, Finn the Fox, Ellie the Elephant, and Pip the Parrot find an ancient map in Luna’s library. The map leads to the legendary Rainbow Gem. They debate how to start their adventure.  
-Select **green** to suggest researching the gem like Luna.  
-Select **yellow** to dive into the adventure immediately like Finn.  
-Select **red** to recall stories about the gem like Ellie.  
-Select **blue** to decipher the map's clues like Pip.  
+
+**Green**: Luna suggests researching the gem.  
+**Yellow**: Finn wants to dive into the adventure immediately.  
+**Red**: Ellie wants to recall stories about the gem.  
+**Blue**: Pip suggests looking at the map's clues.  
 
 ### Green  
 Luna pulls out old books, and they learn about the gem's history, feeling prepared for the journey.  
@@ -35,10 +36,11 @@ page2.png
 
 ### Fixed text  
 The friends enter the Forest of Whispers, where paths twist in every direction. They need to choose the right path to continue their quest.  
-Select **green** to solve a riddle on a tree like Luna.  
-Select **yellow** to follow the sound of running water like Finn.  
-Select **red** to remember the correct path like Ellie.  
-Select **blue** to chat with the forest birds like Pip.  
+
+**Green**: Luna solves a riddle on a tree.  
+**Yellow**: Finn follows the sound of running water.  
+**Red**: Ellie remembers the correct path.  
+**Blue**: Pip chats with the forest birds.  
 
 ### Green  
 Luna finds a riddle that, when solved, illuminates the correct path through the trees.  
@@ -62,10 +64,11 @@ page3.png
 
 ### Fixed text  
 Next, they face the Bridge of Hues, a colorful bridge missing several planks. They must find a way across to continue.  
-Select **green** to calculate the jumps like Luna.  
-Select **yellow** to leap over the gaps like Finn.  
-Select **red** to rebuild the bridge like Ellie.  
-Select **blue** to sing a magical song like Pip.  
+
+**Green**: Luna calculates the jumps.  
+**Yellow**: Finn leaps over the gaps.  
+**Red**: Ellie rebuilds the bridge.  
+**Blue**: Pip sings a magical song.  
 
 ### Green  
 Luna calculates the exact distances, allowing safe jumps across the bridge for everyone.  
@@ -89,10 +92,11 @@ page4.png
 
 ### Fixed text  
 A statue blocks their path, promising passage only if they answer its riddle. The friends huddle to think.  
-Select **green** to solve the riddle logically like Luna.  
-Select **yellow** to look for hints around the statue like Finn.  
-Select **red** to recall a similar riddle like Ellie.  
-Select **blue** to repeat the riddle out loud like Pip.  
+
+**Green**: Luna solves the riddle logically.  
+**Yellow**: Finn looks for hints around the statue.  
+**Red**: Ellie recalls a similar riddle.  
+**Blue**: Pip repeats the riddle out loud.  
 
 ### Green  
 Luna whispers the logical answer to the riddle, and the statue steps aside with a smile.  
@@ -116,10 +120,11 @@ page5.png
 
 ### Fixed text  
 The Meadow of Mists envelops them in a thick fog. They need to find a way through without losing each other.  
-Select **green** to navigate by the stars like Luna.  
-Select **yellow** to climb a tree for a better view like Finn.  
-Select **red** to create a big fan like Ellie.  
-Select **blue** to sing a wind-summoning song like Pip.  
+
+**Green**: Luna navigates by the stars.  
+**Yellow**: Finn climbs a tree for a better view.  
+**Red**: Ellie creates a big fan.  
+**Blue**: Pip sings a wind-summoning song.  
 
 ### Green  
 Luna guides them using the stars, their path illuminated by a soft glow above the mist.  
@@ -143,10 +148,11 @@ page6.png
 
 ### Fixed text  
 In the Cave of Echoes, darkness surrounds them. They must find a way to navigate the pitch-black cave without getting lost.  
-Select **green** to draw a map like Luna.  
-Select **yellow** to bravely lead the way like Finn.  
-Select **red** to use echoing sounds like Ellie.  
-Select **blue** to mimic cave sounds like Pip.  
+
+**Green**: Luna draws a map.  
+**Yellow**: Finn bravely leads the way.  
+**Red**: Ellie uses echoing sounds.  
+**Blue**: Pip mimics cave sounds.  
 
 ### Green  
 Luna sketches a quick map as they move, her lines sure and true, guiding them through the darkness.  
@@ -170,10 +176,11 @@ page7.png
 
 ### Fixed text  
 They find the Rainbow Gem, but it’s locked behind a complex puzzle. The key to the gem’s chamber awaits their cleverness.  
-Select **green** to decipher the puzzle’s logic like Luna.  
-Select **yellow** to find physical clues like Finn.  
-Select **red** to remember the pattern from the map like Ellie.  
-Select **blue** to repeat a sequence of sounds like Pip.  
+
+**Green**: Luna deciphers the puzzle’s logic.  
+**Yellow**: Finn finds physical clues.  
+**Red**: Ellie remember the pattern from the map.  
+**Blue**: Pip repeats a sequence of sounds.  
 
 ### Green  
 Luna’s logic untangles the puzzle, and the chamber slowly opens, revealing the glowing Rainbow Gem.  
@@ -197,10 +204,11 @@ page8.png
 
 ### Fixed text  
 With the Rainbow Gem before them, they must decide on their wish. Each friend has a dream, but they need to choose together.  
-Select **green** to wish for endless books like Luna.  
-Select **yellow** to wish for more adventures like Finn.  
-Select **red** to wish for happiness for all friends like Ellie.  
-Select **blue** to wish for the ability to speak all languages like Pip.  
+
+**Green**: Luna wishes for endless books.  
+**Yellow**: Finn wishes for more adventures.  
+**Red**: Ellie wishes for happiness for all friends.  
+**Blue** Pip wish for the ability to speak all languages.  
 
 ### Green  
 Luna’s wish for endless books fills the room with laughter, imagining a library that never ends.  
@@ -224,6 +232,7 @@ page9.png
 
 ### Fixed text  
 As they debate, they realize that their true wish is to continue their adventures together, their friendship the greatest treasure.  
+
 Select **green**, **yellow**, **red**, or **blue** to wish for more adventures together, symbolizing their unbreakable bond.  
 
 ### Green  
