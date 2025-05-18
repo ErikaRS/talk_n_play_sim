@@ -9,7 +9,11 @@ export default defineConfig({
     setupFiles: './vitest.setup.js',
     include: ['tests-vite/**/*.test.js'],
     deps: {
-      inline: ['@testing-library/jest-dom']
+      optimizer: {
+        web: {
+          include: ['@testing-library/jest-dom']
+        }
+      }
     }
   },
   build: {
