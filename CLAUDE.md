@@ -97,3 +97,57 @@ Both test suites cover the same core functionality but use different syntax patt
 3. **App Tests**: Test the integration between components and user interaction flows
 
 Both test frameworks can be run using the single `npm test` command, which will execute both test suites sequentially.
+
+## Code Style Guide
+
+The project follows these coding standards to ensure readability and maintainability:
+
+### Naming Conventions
+- Use specific, descriptive, succinct names that convey purpose
+- Choose concrete over abstract names (e.g., `canListenOnPort` vs `serverCanStart`)
+- Include important attributes like units or state (e.g., `unsafeUrl`, `safeUrl`)
+- Use `is/has/can/should` prefixes for boolean variables
+- Scope dictates name length (shorter names for smaller scope)
+- Use `first/last` for inclusive ranges, `begin/end` for inclusive/exclusive ranges
+
+### Code Structure
+- Similar code should have similar visual structure
+- Use line breaks to segment logical blocks for better comprehension
+- Maintain consistent formatting and indentation
+- Minimize scope of variables to reduce mental overhead
+- Prefer "write-once" variables to aid reasoning about code
+
+### Control Flow
+- Left-hand side should be expressions being interrogated
+- Right-hand side should be constant expressions or comparables
+- Use ternary operations only for simple cases
+- Prefer `while` loops to `do/while` loops
+- Avoid deep nesting; refactor or return early instead
+- When ordering `if/else`, consider:
+  - Dealing with positive case first
+  - Dealing with simpler case first
+  - Handling most relevant/interesting case first
+
+### Commenting
+- Comments should help readers understand the code as well as the writer did
+- Appropriate uses include:
+  - High-level explanations of code purpose
+  - Recording thought process
+  - Explanations for counterintuitive code
+  - Guidance for future developers (e.g., `TODO`, `FIXME`, `HACK`, `XXX`)
+  - Warnings about unexpected behaviors
+  - Input/output examples
+
+### Refactoring Principles
+- Extract unrelated subproblems from methods
+- Separate generic code from project-specific code
+- Move utility functions to appropriate utility collections
+- Modularize code to maintain decoupling between subsystems
+
+### Testing Considerations
+- Write test code that is readable and maintainable
+- Provide descriptive error messages in tests
+- Choose simple but effective test cases
+- Create granular tests to facilitate debugging
+- Use descriptive test names (e.g., `Test_<functionName>_<scenario>`)
+- Design code to be testable (well-defined interfaces, minimal setup)
