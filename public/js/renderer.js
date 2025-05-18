@@ -66,7 +66,9 @@ class StoryRenderer {
         // Show fixed text + color-specific text
         this.elements.leftPage.innerHTML = (
             `<p>${fixedHtml}</p>` +
-            `<p class="color-text"><span class="${color}-color">${displayColor}</span>: ${colorHtml}</p>`
+            `<div class="color-choices">` +
+            `<p class="color-text"><span class="${color}-color">${displayColor}</span>: ${colorHtml}</p>` +
+            `</div>`
         );
         
         return true;

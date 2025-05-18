@@ -73,27 +73,45 @@ class MarkdownParser {
             return '';
         }
         
-        // Replace newlines with HTML line breaks
-        let html = text.replace(/\n/g, '<br>');
+        // Split text into paragraphs (double newlines)
+        const paragraphs = text.split(/\n\n+/);
         
-        // Replace color-specific bold text with colored text
-        const availableColors = typeof CONFIG !== 'undefined' && CONFIG.colors;
-        if (availableColors) {
-            CONFIG.colors.forEach(color => {
-                const colorPattern = new RegExp(`\\*\\*(${color})\\*\\*`, 'gi');
-                const colorReplacement = `<strong class="${color}-color">$1</strong>`;
-                html = html.replace(colorPattern, colorReplacement);
+        // Process each paragraph separately
+        const processedParagraphs = paragraphs.map(para => {
+            // Replace single newlines with <br> tags within each paragraph
+            let processed = para.trim().replace(/\n/g, '<br>');
+            
+            // Auto-color the color words in the text
+            const colorWords = ['green', 'yellow', 'red', 'blue'];
+            colorWords.forEach(color => {
+                const colorWordPattern = new RegExp(`\\b(${color})\\b`, 'gi');
+                processed = processed.replace(colorWordPattern, `<span class="${color}-color">$1</span>`);
             });
-        }
+            
+            // Replace color-specific bold text with colored text
+            const availableColors = typeof CONFIG !== 'undefined' && CONFIG.colors;
+            if (availableColors) {
+                CONFIG.colors.forEach(color => {
+                    const colorPattern = new RegExp(`\\*\\*(${color})\\*\\*`, 'gi');
+                    const colorReplacement = `<strong class="${color}-color">$1</strong>`;
+                    processed = processed.replace(colorPattern, colorReplacement);
+                });
+            }
+            
+            // Convert remaining markdown
+            const boldPattern = /\*\*(.+?)\*\*/g;
+            const italicPattern = /\*(.+?)\*/g;
+            
+            processed = processed.replace(boldPattern, '<strong>$1</strong>'); // Bold
+            processed = processed.replace(italicPattern, '<em>$1</em>');       // Italic
+            
+            return processed;
+        });
         
-        // Convert remaining markdown
-        const boldPattern = /\*\*(.+?)\*\*/g;
-        const italicPattern = /\*(.+?)\*/g;
-        
-        html = html.replace(boldPattern, '<strong>$1</strong>'); // Bold
-        html = html.replace(italicPattern, '<em>$1</em>');       // Italic
-        
-        return html;
+        // Join paragraphs with proper HTML paragraph spacing
+        return processedParagraphs.length > 1 
+            ? processedParagraphs.join('</p><p>') 
+            : processedParagraphs[0];
     }
 
     /**
