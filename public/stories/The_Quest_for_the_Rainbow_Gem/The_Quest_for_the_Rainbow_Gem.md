@@ -9,7 +9,7 @@ page1.png
 ### Fixed text  
 In the magical land of Coloria, Luna the Rabbit, Finn the Fox, Ellie the Elephant, and Pip the Parrot discover a glowing map in Luna's library. The map shows the way to the Rainbow Gem - a crystal that grants one special wish!
 
-"This could be our greatest adventure!" Finn says with excitement.
+"This could be our greatest adventure!" Finn says.
 
 Which friend will you follow to begin the quest?
 
@@ -88,7 +88,7 @@ Luna examines the bridge carefully. "We need to be precise," she says, marking s
 "We can fix this together," Ellie says. She gathers fallen trees and vines with her strong trunk. Everyone works together to make new planks and secure them in place. "The strongest bridges are built by friends," Ellie says as you cross the now-fixed bridge.
 
 ### Blue  
-Pip hops to the edge and sings a beautiful melody. As his song echoes through the canyon, the broken pieces of the bridge begin to glow and float back into place! "The bridge remembers what it's supposed to be," Pip explains as you cross the magical rainbow path.
+Pip hops to the edge and sings a beautiful melody. As his song echoes through the canyon, the broken pieces of the bridge glow and float back into place! "The bridge remembers what it's supposed to be," Pip explains as you cross the magical rainbow path.
 
 ---
 
@@ -99,7 +99,7 @@ Page 4
 page4.png  
 
 ### Fixed text  
-A huge stone owl blocks the path ahead. Its jeweled eyes follow your movements, and its wings spread across the trail.
+A huge stone owl blocks the path, its wings spread across the trail.
 
 In a deep voice, it speaks: "Only those who answer my riddle may pass. 'I have cities without houses, forests without trees, and oceans without water. What am I?'"
 
@@ -114,7 +114,7 @@ How will you solve this tricky riddle?
 Luna thinks about the riddle step by step. "Cities, forests, oceans - all places without their main parts," she mumbles. Suddenly her face brightens. "A map!" she tells the owl. The statue's eyes glow, and its wings fold back to let you pass.
 
 ### Yellow  
-While others think, Finn circles the statue. He notices the statue's shadow looks different - exactly like a map! "The answer is a map!" he announces. The owl's eyes shine with approval, and it moves aside. "Sometimes the answer isn't in words, but in what you see."
+While others think, Finn circles the statue. He notices the statue's shadow looks exactly like a map! "The answer is a map!" he announces. The owl's eyes shine with approval, and it moves aside. "Sometimes the answer isn't in words, but in what you see."
 
 ### Red  
 "My grandmother asked me this exact riddle!" Ellie says with a big smile. She turns to the owl, "You are a map." As the guardian's wings fold away, Ellie explains, "Stories from our families often prepare us for challenges we face later."
@@ -174,7 +174,7 @@ Without light, how will you find your way through this dark cave?
 "In darkness, touch becomes our guide," Luna says, taking out a piece of chalk. She marks the wall as you go - one mark for a turn, two for a slope. Her careful system helps you navigate without getting lost, and you emerge safely with a map of the cave!
 
 ### Yellow  
-"Feel the air currents," Finn says, moving confidently in the darkness. He notices tiny changes in temperature and the feel of the ground. His natural instincts guide you through passages no map could show, proving sometimes your feelings know the right way.
+"Feel the air currents," Finn says, moving confidently in the darkness. He notices tiny changes in temperature and the feel of the ground. His instincts guide you through passages no map could show, proving sometimes your feelings know the right way.
 
 ### Red  
 "Listen!" Ellie makes gentle trumpeting sounds. "Hear how they come back? Solid walls make clear echoes; open passages swallow sound." Under her guidance, you learn to "hear" the shape of the cave. Soon you spot daylight ahead!
@@ -191,9 +191,9 @@ Page 7
 page7.png  
 
 ### Fixed text  
-Finally, you reach a chamber with the legendary Rainbow Gem floating in the center! It pulses with beautiful colors. But a complex lock blocks your way, requiring a special sequence to open.
+Finally, you reach a chamber with the Rainbow Gem floating in the center! It pulses with beautiful colors. A complex lock blocks your way, requiring a special sequence to open.
 
-This is the final challenge before you can reach the Rainbow Gem! How will you open the lock?
+How will you open the lock?
 
 **Green**: Luna studies the patterns around the lock.
 **Yellow**: Finn searches for hidden clues in the chamber.
@@ -231,16 +231,16 @@ Each friend has dreamed of what they might wish for. But now they must decide - 
 **Blue**: Pip wants to save forgotten songs and stories.
 
 ### Green  
-"We could learn so much," Luna says softly. Her eyes reflect the gem's rainbow light as she describes books filled with answers to the world's greatest mysteries. "Knowledge isn't just for keeping," she explains. "When we understand more, we can help others and solve problems that seem impossible."
+"We could learn so much," Luna says softly. Her eyes reflect the gem's rainbow light as she describes books filled with answers to the world's greatest mysteries. She explains. "When we understand more, we can help others and solve problems that seem impossible."
 
 ### Yellow  
-"Think of the places we could explore!" Finn says excitedly. His eyes shine as bright as the gem when he talks about mountains no one has climbed and valleys waiting to be discovered. "Every adventure teaches us something new about ourselves and the world around us."
+"Think of the places we could explore!" Finn says excitedly. His eyes shine as bright as the gem when he talks about mountains no one has climbed and valleys waiting to be discovered. "Every adventure teaches us something new."
 
 ### Red  
-"I wish everyone could be friends," Ellie says gently. She describes a world where differences are celebrated, not feared. "My grandmother said harmony isn't everyone being the same," she explains. "It's different voices creating something beautiful together, like music."
+"I wish everyone could be friends," Ellie says gently. She describes a world where differences are celebrated, not feared. "My grandmother said harmony isn't being the same," she explains. "It's different voices creating something beautiful together."
 
 ### Blue  
-"So many songs are being forgotten," Pip says sadly. He explains how each lost story takes with it the wisdom of those who created it. "When we remember old stories and songs," he chirps, "we learn from those who came before us and don't have to learn the same lessons over again."
+"So many songs are forgotten," Pip says sadly. He explains how each lost story takes the wisdom of those who created it. "When we remember old stories and songs," he chirps, "we learn from those who came before us and don't have to learn the same lessons over again."
 
 ---
 
