@@ -1,0 +1,22 @@
+{
+  "name": "talk_n_play_sim",
+  "version": "1.0.0",
+  "description": "Talk 'n Play Simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:vitest",
+    "test:vitest": "npx vitest run",
+    "test:watch": "npx vitest",
+    "generate-story": "node scripts/generate-story.js"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "jsdom": "^22.1.0",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.3"
+  },
+  "dependencies": {
+    "openai": "^4.28.0"
+  }
+}

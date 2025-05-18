@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talk 'n Play Simulator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="story-picker">
+        <h3>Story Selection</h3>
+        <div class="story-list">
+          <!-- Stories will be populated from available stories -->
+        </div>
+      </div>
+      <div class="content">
+        <h1>Talk 'n Play Simulator</h1>
+        <div class="page-container">
+          <div class="rectangle left-page">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+          <div class="rectangle right-page">
+            <!-- <img src="public/images/page1.svg" alt="Featured Image"> -->
+          </div>
+        </div>
+      </div>
+      <div class="color-buttons">
+        <button class="cntrl-btn" id="nav-left">◀◀</button>
+        <button class="cntrl-btn" id="nav-sound">▶</button>
+        <button class="cntrl-btn" id="nav-right">▶▶</button>
+        <button class="color-btn" id="green"></button>
+        <button class="color-btn" id="yellow"></button>
+        <button class="color-btn" id="red"></button>
+        <button class="color-btn" id="blue"></button>
+      </div>
+    </div>
+
+    <script src="js/parser.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
