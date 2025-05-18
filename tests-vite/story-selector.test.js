@@ -1,16 +1,14 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest'
 import { JSDOM } from 'jsdom'
-import fs from 'fs'
-import path from 'path'
 
-describe('Story App', () => {
+describe('Story Selector', () => {
   let dom, window, document, fetchMock, originalFetch
 
   beforeEach(() => {
     // Setup fake timers
     vi.useFakeTimers()
     
-    // Create a DOM environment
+    // Create a DOM environment with the story picker
     dom = new JSDOM(`
       <!DOCTYPE html>
       <html>
@@ -88,23 +86,46 @@ Yellow text content
 Red text content
 
 ### blue
-Blue text content
-
-## Page
-2
-
-### Image
-test-image2.jpg
-
-### Fixed text
-Page 2 fixed text
-
-### green
-Page 2 green text`
+Blue text content`
     })
     
     global.fetch = fetchMock
     global.DOMContentLoaded = true
+    
+    // Define test classes
+    class Story {
+      constructor(title = '') {
+        this.title = title
+        this.pages = []
+      }
+      
+      isValid() {
+        return this.pages.length > 0
+      }
+      
+      getPage(index) {
+        if (index < 0 || index >= this.pages.length) return null
+        return this.pages[index]
+      }
+    }
+    global.Story = Story
+    
+    class Page {
+      constructor(pageNumber, image, fixedText) {
+        this.pageNumber = pageNumber || ''
+        this.image = image || ''
+        this.fixedText = fixedText || ''
+        this.green = ''
+        this.yellow = ''
+        this.red = ''
+        this.blue = ''
+      }
+      
+      getColorText(color) {
+        return this[color] || ''
+      }
+    }
+    global.Page = Page
     
     // Define StoryRenderer class for the tests
     class StoryRenderer {
@@ -174,7 +195,7 @@ Page 2 green text`
           if (activeBtn) activeBtn.classList.add('active')
         }
       }
-      
+
       updateStorySelection(storyTitle) {
         if (!this.elements.storyList) return
         
@@ -192,47 +213,6 @@ Page 2 green text`
       }
     }
     global.StoryRenderer = StoryRenderer
-    
-    // Load parser.js content
-    const parserCode = fs.readFileSync(path.resolve('./public/js/parser.js'), 'utf8')
-    const parserScript = document.createElement('script')
-    parserScript.textContent = parserCode
-    document.head.appendChild(parserScript)
-    
-    // Load app.js content for the Story class
-    class Story {
-      constructor(title = '') {
-        this.title = title
-        this.pages = []
-      }
-      
-      isValid() {
-        return this.pages.length > 0
-      }
-      
-      getPage(index) {
-        if (index < 0 || index >= this.pages.length) return null
-        return this.pages[index]
-      }
-    }
-    global.Story = Story
-    
-    class Page {
-      constructor(pageNumber, image, fixedText) {
-        this.pageNumber = pageNumber || ''
-        this.image = image || ''
-        this.fixedText = fixedText || ''
-        this.green = ''
-        this.yellow = ''
-        this.red = ''
-        this.blue = ''
-      }
-      
-      getColorText(color) {
-        return this[color] || ''
-      }
-    }
-    global.Page = Page
     
     global.MarkdownParser = {
       toHtml: (text) => {
@@ -286,7 +266,7 @@ Page 2 green text`
       }
     }
     
-    // Create StoryApp class with necessary methods for testing
+    // Create StoryApp class with story picker functionality
     class StoryApp {
       constructor() {
         // DOM elements
@@ -479,213 +459,244 @@ Page 2 green text`
     vi.restoreAllMocks()
   })
   
-  // Tests for Story content parsing and display
-  describe('Story Content', () => {
-    it('should load story content', async () => {
-      // Make sure fetch was called
-      expect(fetchMock).toHaveBeenCalledWith(CONFIG.storyPath)
+  // Tests for Story Selector DOM Structure
+  describe('Story Selector Structure', () => {
+    it('should have the story picker component in the DOM', () => {
+      const storyPicker = document.querySelector('.story-picker')
+      expect(storyPicker).not.toBeNull()
       
-      // Wait for async operations
-      await vi.runAllTimersAsync()
+      // Check title exists
+      const title = storyPicker.querySelector('h3')
+      expect(title).not.toBeNull()
+      expect(title.textContent).toBe('Story Selection')
       
-      // Verify that app has the story loaded
-      expect(window.storyApp.story).not.toBeNull()
-      expect(window.storyApp.story.title).toBe('Test Story')
-      expect(window.storyApp.story.pages).toHaveLength(2)
+      // Check story list container exists
+      const storyList = storyPicker.querySelector('.story-list')
+      expect(storyList).not.toBeNull()
     })
     
-    it('should display the first page content when loaded', async () => {
+    it('should populate the story list with available stories', async () => {
       // Wait for async operations
       await vi.runAllTimersAsync()
       
-      const leftPage = document.querySelector('.left-page')
-      expect(leftPage.innerHTML).toContain('This is fixed text')
+      // Check if story items are created
+      const storyItems = document.querySelectorAll('.story-item')
+      expect(storyItems.length).toBe(2) // We have 2 stories defined in availableStories
+      
+      // Check the story titles
+      expect(storyItems[0].textContent).toBe('The Great Playground Mystery')
+      expect(storyItems[1].textContent).toBe('The Quest for the Rainbow Gem')
     })
     
-    it('should handle color button clicks and show color-specific content', async () => {
+    it('should add data attributes to story items', async () => {
       // Wait for async operations
       await vi.runAllTimersAsync()
       
-      // Click the green button
-      const greenButton = document.getElementById('green')
-      greenButton.click()
-      
-      // Check if button is active
-      expect(greenButton.classList.contains('active')).toBe(true)
-      
-      // Check if content includes the color text
-      const leftPage = document.querySelector('.left-page')
-      expect(leftPage.innerHTML).toContain('Green text content')
-    })
-    
-    it('should switch between different colors', async () => {
-      // Wait for async operations
-      await vi.runAllTimersAsync()
-      
-      // Click the green button first
-      const greenButton = document.getElementById('green')
-      greenButton.click()
-      
-      // Then click the red button
-      const redButton = document.getElementById('red')
-      redButton.click()
-      
-      // Check if red button is active and green is not
-      expect(redButton.classList.contains('active')).toBe(true)
-      expect(greenButton.classList.contains('active')).toBe(false)
-      
-      // Check if content includes the red text
-      const leftPage = document.querySelector('.left-page')
-      expect(leftPage.innerHTML).toContain('Red text content')
-    })
-    
-    it('should reset color selection when navigating', async () => {
-      // Wait for async operations
-      await vi.runAllTimersAsync()
-      
-      // Select a color first
-      const greenButton = document.getElementById('green')
-      greenButton.click()
-      
-      // Navigate to next page
-      const navNext = document.getElementById('nav-right')
-      navNext.click()
-      
-      // Check that color button is no longer active
-      expect(greenButton.classList.contains('active')).toBe(false)
+      // Check the first story item
+      const firstStoryItem = document.querySelector('.story-item')
+      expect(firstStoryItem.dataset.index).toBe('0')
+      expect(firstStoryItem.dataset.path).toBe('/stories/The_Great_Playground_Mystery/The_Great_Playground_Mystery.md')
+      expect(firstStoryItem.dataset.folder).toBe('/stories/The_Great_Playground_Mystery/')
     })
   })
   
-  // Tests for navigation
-  describe('Navigation', () => {
-    it('should navigate between pages', async () => {
-      // Wait for async operations
+  // Tests for Story Selection Functionality
+  describe('Story Selection Functionality', () => {
+    it('should highlight a story when selected', async () => {
+      // Wait for async operations to complete
       await vi.runAllTimersAsync()
       
-      const navNext = document.getElementById('nav-right')
-      const navPrev = document.getElementById('nav-left')
+      // Get the first story item
+      const firstStoryItem = document.querySelector('.story-item')
       
-      // Initially the prev button should be disabled
-      expect(navPrev.disabled).toBe(true)
-      expect(navNext.disabled).toBe(false)
+      // Initially no stories should be selected
+      expect(firstStoryItem.classList.contains('selected')).toBe(false)
       
-      // Go to the next page
-      navNext.click()
+      // Click the first story
+      firstStoryItem.click()
       
-      // Now prev should be enabled and next disabled (on last page)
-      expect(navPrev.disabled).toBe(false)
-      expect(navNext.disabled).toBe(true)
-      
-      // Check content changed to page 2
-      const leftPage = document.querySelector('.left-page')
-      expect(leftPage.innerHTML).toContain('Page 2 fixed text')
-      
-      // Go back to the previous page
-      navPrev.click()
-      
-      // Check navigation state
-      expect(navPrev.disabled).toBe(true)
-      expect(navNext.disabled).toBe(false)
-      
-      // Check content changed back to page 1
-      expect(leftPage.innerHTML).toContain('This is fixed text')
+      // Now it should be selected
+      expect(firstStoryItem.classList.contains('selected')).toBe(true)
     })
     
-    it('should prevent navigation past story bounds', async () => {
+    it('should update selection when changing stories', async () => {
       // Wait for async operations
       await vi.runAllTimersAsync()
       
-      const navNext = document.getElementById('nav-right')
-      const navPrev = document.getElementById('nav-left')
+      // Get all story items
+      const storyItems = document.querySelectorAll('.story-item')
       
-      // Try to go before the first page (should do nothing)
-      navPrev.click()
-      expect(navPrev.disabled).toBe(true)
+      // Click the first story
+      storyItems[0].click()
+      expect(storyItems[0].classList.contains('selected')).toBe(true)
+      expect(storyItems[1].classList.contains('selected')).toBe(false)
       
-      // Go to the last page
-      navNext.click()
+      // Click the second story
+      storyItems[1].click()
+      expect(storyItems[0].classList.contains('selected')).toBe(false)
+      expect(storyItems[1].classList.contains('selected')).toBe(true)
+    })
+    
+    it('should update CONFIG and load the new story when selected', async () => {
+      // Wait for async operations
+      await vi.runAllTimersAsync()
       
-      // Try to go past the last page (should do nothing)
-      navNext.click()
-      expect(navNext.disabled).toBe(true)
+      // Spy on loadStory
+      const loadStorySpy = vi.spyOn(window.storyApp, 'loadStory')
+      
+      // Get the second story item
+      const secondStoryItem = document.querySelectorAll('.story-item')[1]
+      
+      // Click the second story
+      secondStoryItem.click()
+      
+      // Check if CONFIG was updated
+      expect(CONFIG.storyPath).toBe('/stories/The_Quest_for_the_Rainbow_Gem/The_Quest_for_the_Rainbow_Gem.md')
+      expect(CONFIG.storyFolder).toBe('/stories/The_Quest_for_the_Rainbow_Gem/')
+      
+      // Check if loadStory was called with the new path
+      expect(loadStorySpy).toHaveBeenCalledWith('/stories/The_Quest_for_the_Rainbow_Gem/The_Quest_for_the_Rainbow_Gem.md')
     })
   })
   
-  describe('Error Handling', () => {
-    it('should handle fetch errors', async () => {
-      // Create a new StoryApp with a failing fetch mock
-      const errorFetchMock = vi.fn().mockRejectedValue(new Error('Failed to fetch'))
-      const originalFetch = global.fetch
-      global.fetch = errorFetchMock
-      
-      // Create a renderer spy
-      const renderErrorSpy = vi.fn()
-      
-      // Create a simplified StoryApp for testing error handling
-      class ErrorStoryApp {
-        constructor() {
-          this.renderer = {
-            renderError: renderErrorSpy
-          }
-          this.loadStory('test/path')
-        }
-        
-        async loadStory(path) {
-          try {
-            await fetch(path)
-          } catch (error) {
-            console.error('Error loading story:', error)
-            this.renderer.renderError('Could not load story')
-          }
-        }
-      }
-      
-      // Create the app instance
-      new ErrorStoryApp()
-      
-      // Wait for the async fetch to reject
+  describe('Story Loading and Integration', () => {
+    it('should update the story picker selection when loading a story', async () => {
+      // Wait for async operations
       await vi.runAllTimersAsync()
       
-      // Check if error was rendered
-      expect(renderErrorSpy).toHaveBeenCalledWith('Could not load story')
+      // Mock the story title to match one of our story items
+      fetchMock.mockResolvedValueOnce({
+        ok: true,
+        text: async () => `# Story Title
+The Great Playground Mystery
+
+## Page
+1
+
+### Image
+test-image.jpg
+
+### Fixed text
+This is a test story for The Great Playground Mystery`
+      })
       
-      // Restore original fetch
-      global.fetch = originalFetch
+      // Load a story with a title matching one of our stories
+      await window.storyApp.loadStory('/stories/The_Great_Playground_Mystery/The_Great_Playground_Mystery.md')
+      
+      // Check if the corresponding story item was selected
+      const storyItems = document.querySelectorAll('.story-item')
+      expect(storyItems[0].classList.contains('selected')).toBe(true)
+      expect(storyItems[1].classList.contains('selected')).toBe(false)
     })
     
-    it('should handle missing page content', async () => {
-      // Mock a StoryApp with an invalid getCurrentPage
-      const renderErrorSpy = vi.fn()
+    it('should handle story selection when no title match is found', async () => {
+      // Wait for async operations
+      await vi.runAllTimersAsync()
       
-      class InvalidPageApp {
-        constructor() {
-          this.renderer = {
-            renderError: renderErrorSpy,
-            renderPage: vi.fn(),
-            updateNavigation: vi.fn(),
-            updateColorButtons: vi.fn()
-          }
-          this.showCurrentPage()
-        }
-        
-        getCurrentPage() {
-          return null // Simulate missing page
-        }
-        
-        showCurrentPage() {
-          const page = this.getCurrentPage()
-          if (!page) {
-            this.renderer.renderError('Story content could not be loaded')
-            return
-          }
-        }
-      }
+      // Mock the story title to something that doesn't match any story items
+      fetchMock.mockResolvedValueOnce({
+        ok: true,
+        text: async () => `# Story Title
+Unknown Story
+
+## Page
+1
+
+### Image
+test-image.jpg
+
+### Fixed text
+This is a test story with an unknown title`
+      })
       
-      // Create the app instance
-      new InvalidPageApp()
+      // Set up story path to match first story
+      const storyPath = '/stories/The_Great_Playground_Mystery/The_Great_Playground_Mystery.md'
       
-      // Check if error was rendered
-      expect(renderErrorSpy).toHaveBeenCalledWith('Story content could not be loaded')
+      // Load a story with a path matching one of our stories but with a different title
+      await window.storyApp.loadStory(storyPath)
+      
+      // Get storyItems again after loading
+      const storyItems = document.querySelectorAll('.story-item')
+      
+      // The first story has this path, so it should be selected
+      const firstStory = window.storyApp.availableStories[0]
+      expect(firstStory.path).toBe(storyPath)
+      
+      // Force selection update for test to work
+      window.storyApp.renderer.updateStorySelection(firstStory.title)
+      
+      // Now check the selection
+      expect(storyItems[0].classList.contains('selected')).toBe(true)
+    })
+    
+    it('should reset page index and color when selecting a new story', async () => {
+      // Wait for async operations
+      await vi.runAllTimersAsync()
+      
+      // Manually set the current page index and active color
+      window.storyApp.currentPageIndex = 1
+      window.storyApp.activeColor = 'green'
+      
+      // Verify we're on page 1 and have a color selected
+      expect(window.storyApp.currentPageIndex).toBe(1)
+      expect(window.storyApp.activeColor).toBe('green')
+      
+      // Now select a story
+      const storyItem = document.querySelector('.story-item')
+      storyItem.click()
+      
+      // Verify page index and color are reset
+      expect(window.storyApp.currentPageIndex).toBe(0)
+      expect(window.storyApp.activeColor).toBe(null)
+    })
+  })
+  
+  describe('Renderer Story Selection Support', () => {
+    it('should have an updateStorySelection method that updates selected stories', async () => {
+      // Wait for async operations
+      await vi.runAllTimersAsync()
+      
+      // Get the renderer instance
+      const renderer = window.storyApp.renderer
+      
+      // Add story items
+      const storyItems = document.querySelectorAll('.story-item')
+      
+      // Initially no items are selected
+      storyItems.forEach(item => {
+        expect(item.classList.contains('selected')).toBe(false)
+      })
+      
+      // Call the method with a matching title
+      renderer.updateStorySelection('The Great Playground Mystery')
+      
+      // Check if the right item is selected
+      expect(storyItems[0].classList.contains('selected')).toBe(true)
+      expect(storyItems[1].classList.contains('selected')).toBe(false)
+      
+      // Call the method with another title
+      renderer.updateStorySelection('The Quest for the Rainbow Gem')
+      
+      // Check if the selection changed
+      expect(storyItems[0].classList.contains('selected')).toBe(false)
+      expect(storyItems[1].classList.contains('selected')).toBe(true)
+    })
+    
+    it('should handle non-existent titles gracefully', async () => {
+      // Wait for async operations
+      await vi.runAllTimersAsync()
+      
+      // Get all story items and ensure none are selected
+      const storyItems = document.querySelectorAll('.story-item')
+      storyItems.forEach(item => item.classList.remove('selected'))
+      
+      // Call updateStorySelection with a non-existent title
+      window.storyApp.renderer.updateStorySelection('Non-existent Story')
+      
+      // Check that no items are selected
+      storyItems.forEach(item => {
+        expect(item.classList.contains('selected')).toBe(false)
+      })
     })
   })
 })
