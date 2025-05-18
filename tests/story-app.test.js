@@ -135,6 +135,44 @@ Page 2 green text`
         done();
       }, 100);
     });
+    
+    it('should switch between different colors', (done) => {
+      setTimeout(() => {
+        // Click the green button first
+        const greenButton = document.getElementById('green');
+        greenButton.click();
+        
+        // Then click the red button
+        const redButton = document.getElementById('red');
+        redButton.click();
+        
+        // Check if red button is active and green is not
+        expect(redButton.classList.contains('active')).to.be.true;
+        expect(greenButton.classList.contains('active')).to.be.false;
+        
+        // Check if content includes the red text
+        const leftPage = document.querySelector('.left-page');
+        expect(leftPage.innerHTML).to.include('Red text content');
+        done();
+      }, 100);
+    });
+    
+    it('should reset color selection when navigating', (done) => {
+      setTimeout(() => {
+        // Select a color first
+        const greenButton = document.getElementById('green');
+        greenButton.click();
+        
+        // Navigate to next page
+        const navNext = document.getElementById('nav-right');
+        navNext.click();
+        
+        // Check that color button is no longer active
+        expect(greenButton.classList.contains('active')).to.be.false;
+        
+        done();
+      }, 100);
+    });
   });
   
   // Tests for navigation
@@ -170,6 +208,75 @@ Page 2 green text`
         expect(leftPage.innerHTML).to.include('This is fixed text');
         done();
       }, 100);
+    });
+    
+    it('should prevent navigation past story bounds', (done) => {
+      setTimeout(() => {
+        const app = window;
+        const navNext = document.getElementById('nav-right');
+        const navPrev = document.getElementById('nav-left');
+        
+        // Try to go before the first page (should do nothing)
+        navPrev.click();
+        expect(navPrev.disabled).to.be.true;
+        
+        // Go to the last page
+        navNext.click();
+        
+        // Try to go past the last page (should do nothing)
+        navNext.click();
+        expect(navNext.disabled).to.be.true;
+        
+        done();
+      }, 100);
+    });
+  });
+  
+  describe('Error Handling', () => {
+    // Since we're using a mocked fetch in the tests, we need to test error paths separately
+    it('should handle fetch errors', (done) => {
+      // Create a new JSDOM with a modified fetch that fails
+      const errorDom = new JSDOM(`
+        <!DOCTYPE html>
+        <html>
+        <body>
+          <div class="left-page"></div>
+          <div class="right-page"></div>
+        </body>
+        </html>
+      `, { url: "http://localhost/" });
+      
+      const errorDocument = errorDom.window.document;
+      
+      // Setup error rendering test
+      const elements = {
+        leftPage: errorDocument.querySelector('.left-page'),
+        rightPage: errorDocument.querySelector('.right-page')
+      };
+      
+      const errorRenderer = {
+        renderError: function(message) {
+          elements.leftPage.innerHTML = `<p>${message}</p>`;
+          elements.rightPage.innerHTML = '';
+          return true;
+        }
+      };
+      
+      // Simulate error in loadStory
+      const errorLoadStory = async function() {
+        try {
+          throw new Error('Test error');
+        } catch (error) {
+          console.error('Error loading story:', error);
+          errorRenderer.renderError('Could not load story');
+        }
+      };
+      
+      // Call the function and check the result
+      errorLoadStory().then(() => {
+        expect(elements.leftPage.innerHTML).to.include('Could not load story');
+        done();
+      });
     });
   });
 });

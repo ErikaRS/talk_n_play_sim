@@ -162,6 +162,29 @@ describe('Renderer Module', () => {
       expect(document.querySelector('.right-page').innerHTML).to.include('/stories/test-image.jpg');
     });
     
+    it('should handle pages without images', () => {
+      const page = {
+        pageNumber: '1',
+        image: '',
+        fixedText: 'Text only page',
+        getColorText: () => ''
+      };
+      
+      global.MarkdownParser = {
+        toHtml: (text) => text
+      };
+      
+      renderer.renderPage(page, '/stories/');
+      
+      expect(document.querySelector('.left-page').innerHTML).to.include('Text only page');
+      expect(document.querySelector('.right-page').innerHTML).to.equal('');
+    });
+    
+    it('should return false when rendering an invalid page', () => {
+      const result = renderer.renderPage(null, '/stories/');
+      expect(result).to.be.false;
+    });
+    
     it('should render page with color content', () => {
       // Create a test page
       const page = {
@@ -183,6 +206,22 @@ describe('Renderer Module', () => {
       expect(content).to.include('This is fixed text');
       expect(content).to.include('Green text content');
       expect(content).to.include('class="green-color"');
+    });
+    
+    it('should return false when rendering an invalid page with color', () => {
+      const result = renderer.renderPageWithColor(null, 'green');
+      expect(result).to.be.false;
+    });
+    
+    it('should return false when rendering a page with no color content', () => {
+      const page = {
+        pageNumber: '1',
+        fixedText: 'This is fixed text',
+        getColorText: () => ''
+      };
+      
+      const result = renderer.renderPageWithColor(page, 'green');
+      expect(result).to.be.false;
     });
     
     it('should render error message', () => {
