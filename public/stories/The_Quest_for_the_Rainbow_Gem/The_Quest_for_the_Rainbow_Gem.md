@@ -7,24 +7,28 @@ Page 1
 page1.png  
 
 ### Fixed text  
-In the whimsical land of Coloria, Luna the Rabbit, Finn the Fox, Ellie the Elephant, and Pip the Parrot find an ancient map in Luna’s library. The map leads to the legendary Rainbow Gem. They debate how to start their adventure.  
+In the magical land of Coloria, Luna the Rabbit, Finn the Fox, Ellie the Elephant, and Pip the Parrot discover a glowing map in Luna's library. The map shows the way to the Rainbow Gem - a crystal that grants one special wish!
 
-**Green**: Luna suggests researching the gem.  
-**Yellow**: Finn wants to dive into the adventure immediately.  
-**Red**: Ellie wants to recall stories about the gem.  
-**Blue**: Pip suggests looking at the map's clues.  
+"This could be our greatest adventure!" Finn says with excitement.
+
+Which friend will you follow to begin the quest?
+
+**Green**: Luna wants to study and learn about the gem first.
+**Yellow**: Finn is ready to race off on the adventure right away.
+**Red**: Ellie remembers important stories about the gem.
+**Blue**: Pip notices hidden clues on the map.
 
 ### Green  
-Luna pulls out old books, and they learn about the gem's history, feeling prepared for the journey.  
+"We should learn about the gem before we go," Luna says. She finds old books that tell how the gem was made when all colors of magic came together. Now you know secrets that will help on your journey!
 
 ### Yellow  
-Finn leads the group on a spontaneous route, their excitement for adventure growing.  
+"Let's go now!" Finn grabs the map and leads everyone outside. Running through sunny meadows with the wind in your fur feels wonderful. "The best discoveries happen when you're brave enough to go on adventures," he laughs.
 
 ### Red  
-Ellie shares a story she heard as a calf, revealing the importance of teamwork on their quest.  
+"My grandmother told me about the Rainbow Gem," Ellie says. She shares a story about how the gem only shows itself to friends who work together. "The gem knows that different strengths, when combined, create the best magic."
 
 ### Blue  
-Pip chirps out the hidden message in the map, pointing them to the Forest of Whispers as their first destination.  
+"Look at these tiny symbols!" Pip points excitedly at the map's border. His sharp eyes have found a hidden message. "The Gem's guardians will test not just bravery, but kindness, wisdom, and creativity," he translates.
 
 ---
 
@@ -35,24 +39,26 @@ Page 2
 page2.png  
 
 ### Fixed text  
-The friends enter the Forest of Whispers, where paths twist in every direction. They need to choose the right path to continue their quest.  
+The friends reach the Forest of Whispers, where giant trees make the forest floor dark and mysterious. Many paths wind between the trees, and strange whispers follow you. You must find the right path or get lost forever!
 
-**Green**: Luna solves a riddle on a tree.  
-**Yellow**: Finn follows the sound of running water.  
-**Red**: Ellie remembers the correct path.  
-**Blue**: Pip chats with the forest birds.  
+How will you find your way through this tricky forest?
+
+**Green**: Luna notices strange symbols carved on the trees.
+**Yellow**: Finn hears the sound of hidden water.
+**Red**: Ellie remembers a story about this forest.
+**Blue**: Pip wants to ask the forest birds for help.
 
 ### Green  
-Luna finds a riddle that, when solved, illuminates the correct path through the trees.  
+Luna studies the tree carvings carefully. "It's a puzzle!" she says. When she solves it, a path lights up with soft blue light, showing the safe way through the forest. "The forest rewards those who take time to understand its secrets."
 
 ### Yellow  
-Finn’s keen ears lead them along a babbling brook that trails towards their next challenge.  
+"Listen!" Finn's ears twitch. He hears running water that no one else can hear. "Water always finds a path through," he explains, following the sound to a hidden stream that cuts through the heart of the forest and leads you safely to the other side.
 
 ### Red  
-Ellie’s memory of her story guides them confidently down a path filled with friendly animal faces.  
+"My grandmother said this forest isn't meant to trap travelers, but to protect them," Ellie says, touching a tree with her trunk. The whispers suddenly sound friendly! Ellie follows them down a path that brightens as you walk, guiding you safely through.
 
 ### Blue  
-Pip’s conversations with the birds earn them a guided flight through the forest, right to the edge.  
+Pip flies up to the treetops and returns with a friendly sparrow. Soon many colorful birds circle overhead, chirping a song that guides your way. They show you hidden paths and warn about dangerous ones. Pip thanks them when you safely reach the forest's edge.
 
 ---
 
@@ -63,24 +69,26 @@ Page 3
 page3.png  
 
 ### Fixed text  
-Next, they face the Bridge of Hues, a colorful bridge missing several planks. They must find a way across to continue.  
+Beyond the forest stands the Bridge of Hues - once a beautiful rainbow bridge over a deep, misty canyon. Now many of its colorful planks are missing, leaving dangerous gaps.
 
-**Green**: Luna calculates the jumps.  
-**Yellow**: Finn leaps over the gaps.  
-**Red**: Ellie rebuilds the bridge.  
-**Blue**: Pip sings a magical song.  
+You need to cross the bridge to continue your quest. How will you do it?
+
+**Green**: Luna wants to figure out exactly how far to jump.
+**Yellow**: Finn thinks moving quickly and confidently is best.
+**Red**: Ellie suggests fixing the bridge together.
+**Blue**: Pip remembers a special song that might help.
 
 ### Green  
-Luna calculates the exact distances, allowing safe jumps across the bridge for everyone.  
+Luna examines the bridge carefully. "We need to be precise," she says, marking safe spots with chalk. She creates a pattern to follow - "Three steps here, one jump there, never step on yellow." Following her plan, you cross safely.
 
 ### Yellow  
-Finn’s daring leaps inspire confidence, and one by one, they all make it across.  
+"Don't hesitate!" Finn says, showing everyone with a confident leap across the first gap. His courage makes everyone brave! Under his guidance, you all cross with quick, sure movements. When you reach the other side, you feel proud of your bravery.
 
 ### Red  
-Ellie finds materials nearby and, with help from her friends, rebuilds the bridge stronger than before.  
+"We can fix this together," Ellie says. She gathers fallen trees and vines with her strong trunk. Everyone works together to make new planks and secure them in place. "The strongest bridges are built by friends," Ellie says as you cross the now-fixed bridge.
 
 ### Blue  
-Pip’s song enchants the broken planks, which float back into place, repairing the bridge magically.  
+Pip hops to the edge and sings a beautiful melody. As his song echoes through the canyon, the broken pieces of the bridge begin to glow and float back into place! "The bridge remembers what it's supposed to be," Pip explains as you cross the magical rainbow path.
 
 ---
 
@@ -91,24 +99,28 @@ Page 4
 page4.png  
 
 ### Fixed text  
-A statue blocks their path, promising passage only if they answer its riddle. The friends huddle to think.  
+A huge stone owl blocks the path ahead. Its jeweled eyes follow your movements, and its wings spread across the trail.
 
-**Green**: Luna solves the riddle logically.  
-**Yellow**: Finn looks for hints around the statue.  
-**Red**: Ellie recalls a similar riddle.  
-**Blue**: Pip repeats the riddle out loud.  
+In a deep voice, it speaks: "Only those who answer my riddle may pass. 'I have cities without houses, forests without trees, and oceans without water. What am I?'"
+
+How will you solve this tricky riddle?
+
+**Green**: Luna thinks about the riddle carefully.
+**Yellow**: Finn looks for clues around the statue.
+**Red**: Ellie thinks she's heard this riddle before.
+**Blue**: Pip tries saying the riddle in different ways.
 
 ### Green  
-Luna whispers the logical answer to the riddle, and the statue steps aside with a smile.  
+Luna thinks about the riddle step by step. "Cities, forests, oceans - all places without their main parts," she mumbles. Suddenly her face brightens. "A map!" she tells the owl. The statue's eyes glow, and its wings fold back to let you pass.
 
 ### Yellow  
-Finn’s investigation uncovers a hint in the statue’s shadow, leading to the correct answer.  
+While others think, Finn circles the statue. He notices the statue's shadow looks different - exactly like a map! "The answer is a map!" he announces. The owl's eyes shine with approval, and it moves aside. "Sometimes the answer isn't in words, but in what you see."
 
 ### Red  
-Ellie remembers the riddle’s answer from one of her stories, and the pathway opens.  
+"My grandmother asked me this exact riddle!" Ellie says with a big smile. She turns to the owl, "You are a map." As the guardian's wings fold away, Ellie explains, "Stories from our families often prepare us for challenges we face later."
 
 ### Blue  
-As Pip repeats the riddle, the answer echoes back from the trees, delighting the statue into moving.  
+Pip repeats the riddle softly, listening to how each word sounds. This gives him an idea! "A map!" he chirps to the owl. "You're a map!" The statue's eyes light up as its wings fold back. "Sometimes you need to listen not just to what words say, but how they feel."
 
 ---
 
@@ -119,24 +131,26 @@ Page 5
 page5.png  
 
 ### Fixed text  
-The Meadow of Mists envelops them in a thick fog. They need to find a way through without losing each other.  
+The Meadow of Mists surrounds you with thick fog. You can barely see your friends beside you! Strange lights flicker in the distance, and confusing sounds come from all directions.
 
-**Green**: Luna navigates by the stars.  
-**Yellow**: Finn climbs a tree for a better view.  
-**Red**: Ellie creates a big fan.  
-**Blue**: Pip sings a wind-summoning song.  
+You must find a way through without getting lost or separated in the magical mist.
+
+**Green**: Luna wants to use the stars above the fog.
+**Yellow**: Finn wants to climb a tall tree to see above the fog.
+**Red**: Ellie thinks you can create a fan to blow away the mist.
+**Blue**: Pip believes a special song might move the fog.
 
 ### Green  
-Luna guides them using the stars, their path illuminated by a soft glow above the mist.  
+Luna looks up where the fog occasionally thins. "The stars can guide us!" Using sticks and leaves, she makes a simple tool to track the stars. "If we go exactly that way," she points, "we'll reach the edge." Everyone holds a rope to stay together as Luna guides you safely through.
 
 ### Yellow  
-Finn climbs a tree, shouting directions down to guide the group safely through the meadow.  
+"I'll check from above!" Finn climbs the tallest tree, disappearing into the fog. Soon his voice calls down: "I can see everything from here!" He guides you step by step, calling directions until you all emerge from the foggy meadow, damp but safe.
 
 ### Red  
-Ellie, with help, constructs a giant fan, clearing a path through the mist with a few strong gusts.  
+"Let's work together," Ellie says. Under her direction, everyone gathers big leaves and flexible branches to build a giant fan. When Ellie waves it with her powerful trunk, it clears a path through the fog. Step by step, you make your way through the meadow.
 
 ### Blue  
-Pip’s melody calls forth a gentle wind, which scatters the mist, revealing the way forward.  
+Pip listens to the sounds in the mist. "This fog is magical," he says. He begins a gentle song that seems to speak to the mist itself. The fog begins to dance with the melody, creating a clear tunnel that moves as you walk. "Nature speaks its own language," Pip explains.
 
 ---
 
@@ -147,24 +161,26 @@ Page 6
 page6.png  
 
 ### Fixed text  
-In the Cave of Echoes, darkness surrounds them. They must find a way to navigate the pitch-black cave without getting lost.  
+The Cave of Echoes is completely dark inside. You can't even see your friends next to you! Strange sounds bounce off the walls - some are your own footsteps echoing, but others come from deep within the cave.
 
-**Green**: Luna draws a map.  
-**Yellow**: Finn bravely leads the way.  
-**Red**: Ellie uses echoing sounds.  
-**Blue**: Pip mimics cave sounds.  
+Without light, how will you find your way through this dark cave?
+
+**Green**: Luna suggests feeling the walls to make a map.
+**Yellow**: Finn trusts his instincts to find the way.
+**Red**: Ellie wants to use echoing sounds to guide you.
+**Blue**: Pip thinks imitating cave sounds might help.
 
 ### Green  
-Luna sketches a quick map as they move, her lines sure and true, guiding them through the darkness.  
+"In darkness, touch becomes our guide," Luna says, taking out a piece of chalk. She marks the wall as you go - one mark for a turn, two for a slope. Her careful system helps you navigate without getting lost, and you emerge safely with a map of the cave!
 
 ### Yellow  
-Finn strides forward with confidence, his keen senses alert to any danger, leading his friends safely.  
+"Feel the air currents," Finn says, moving confidently in the darkness. He notices tiny changes in temperature and the feel of the ground. His natural instincts guide you through passages no map could show, proving sometimes your feelings know the right way.
 
 ### Red  
-Ellie’s trumpeting echoes create a sound map, the reverberations revealing the cave’s secrets.  
+"Listen!" Ellie makes gentle trumpeting sounds. "Hear how they come back? Solid walls make clear echoes; open passages swallow sound." Under her guidance, you learn to "hear" the shape of the cave. Soon you spot daylight ahead!
 
 ### Blue  
-Pip mimics the sound of dripping water, leading them to discover a hidden path out of the cave.  
+Pip listens to the cave's drips and whispers, then begins to mimic them perfectly. Something magical happens - tiny cave creatures begin to glow in response to his calls! Their soft light reveals just enough of the path for safe passage through the darkness.
 
 ---
 
@@ -175,24 +191,26 @@ Page 7
 page7.png  
 
 ### Fixed text  
-They find the Rainbow Gem, but it’s locked behind a complex puzzle. The key to the gem’s chamber awaits their cleverness.  
+Finally, you reach a chamber with the legendary Rainbow Gem floating in the center! It pulses with beautiful colors. But a complex lock blocks your way, requiring a special sequence to open.
 
-**Green**: Luna deciphers the puzzle’s logic.  
-**Yellow**: Finn finds physical clues.  
-**Red**: Ellie remember the pattern from the map.  
-**Blue**: Pip repeats a sequence of sounds.  
+This is the final challenge before you can reach the Rainbow Gem! How will you open the lock?
+
+**Green**: Luna studies the patterns around the lock.
+**Yellow**: Finn searches for hidden clues in the chamber.
+**Red**: Ellie recognizes symbols from the map.
+**Blue**: Pip hears faint musical tones from the lock.
 
 ### Green  
-Luna’s logic untangles the puzzle, and the chamber slowly opens, revealing the glowing Rainbow Gem.  
+Luna examines the chamber walls closely. "It's a pattern based on numbers and colors," she realizes. Her quick mind solves the mathematical sequence, and when she enters it, the chamber hums with approval and begins to open. "Even magic follows patterns if you look carefully enough."
 
 ### Yellow  
-Finn’s discovery of hidden clues around the room aligns perfectly, unlocking the chamber.  
+Finn explores the chamber, running his paws along the edges. He discovers tiny hidden buttons that others missed! Following his instincts, he presses them in sequence, and the lock begins to turn and click open. "Sometimes you need to search for the hidden path."
 
 ### Red  
-Ellie’s memory of the map’s pattern activates the mechanism, the door sliding open with a low rumble.  
+"These symbols match our map!" Ellie exclaims. Using her amazing memory, she recalls the exact pattern from the beginning of your journey. When she follows that sequence, the ancient mechanism rumbles open. "The map wasn't just showing where to go, but how to unlock what we'd find!"
 
 ### Blue  
-Pip’s melodic repetition of the cave’s dripping water serves as the final key, unlocking the chamber.  
+"The lock is singing," Pip whispers, tilting his head to listen. He hears soft musical notes coming from the mechanism. Pip sings these notes back in the correct order. With each note, parts of the lock glow and align until, with a harmonious chord, the chamber opens.
 
 ---
 
@@ -203,24 +221,26 @@ Page 8
 page8.png  
 
 ### Fixed text  
-With the Rainbow Gem before them, they must decide on their wish. Each friend has a dream, but they need to choose together.  
+The Rainbow Gem floats before you, its light painting the chamber with shifting colors. According to legend, it will grant one sincere wish. The gem pulses, waiting for your choice.
 
-**Green**: Luna wishes for endless books.  
-**Yellow**: Finn wishes for more adventures.  
-**Red**: Ellie wishes for happiness for all friends.  
-**Blue** Pip wish for the ability to speak all languages.  
+Each friend has dreamed of what they might wish for. But now they must decide - whose wish will the gem fulfill?
+
+**Green**: Luna dreams of knowledge and understanding.
+**Yellow**: Finn wishes for exciting adventures.
+**Red**: Ellie hopes for a world where all creatures live in harmony.
+**Blue**: Pip wants to save forgotten songs and stories.
 
 ### Green  
-Luna’s wish for endless books fills the room with laughter, imagining a library that never ends.  
+"We could learn so much," Luna says softly. Her eyes reflect the gem's rainbow light as she describes books filled with answers to the world's greatest mysteries. "Knowledge isn't just for keeping," she explains. "When we understand more, we can help others and solve problems that seem impossible."
 
 ### Yellow  
-Finn’s wish for adventures paints a picture of endless quests and discoveries, exciting everyone.  
+"Think of the places we could explore!" Finn says excitedly. His eyes shine as bright as the gem when he talks about mountains no one has climbed and valleys waiting to be discovered. "Every adventure teaches us something new about ourselves and the world around us."
 
 ### Red  
-Ellie’s wish for happiness brings warmth to their hearts, imagining a world where their friendship never fades.  
+"I wish everyone could be friends," Ellie says gently. She describes a world where differences are celebrated, not feared. "My grandmother said harmony isn't everyone being the same," she explains. "It's different voices creating something beautiful together, like music."
 
 ### Blue  
-Pip’s wish to speak all languages inspires tales of travel and understanding, bringing cultures together.  
+"So many songs are being forgotten," Pip says sadly. He explains how each lost story takes with it the wisdom of those who created it. "When we remember old stories and songs," he chirps, "we learn from those who came before us and don't have to learn the same lessons over again."
 
 ---
 
@@ -231,21 +251,28 @@ Page 9
 page9.png  
 
 ### Fixed text  
-As they debate, they realize that their true wish is to continue their adventures together, their friendship the greatest treasure.  
+As each friend shares their wish, something amazing happens! The Rainbow Gem pulses faster, its colors swirling into brilliant white light that fills the chamber.
 
-Select **green**, **yellow**, **red**, or **blue** to wish for more adventures together, symbolizing their unbreakable bond.  
+In that magical moment, you all realize the same thing: the gem isn't asking you to choose one wish. It's showing you that your friendship itself is the real magic.
+
+Which color will you choose to make a wish that celebrates your friendship?
+
+**Green**: Choose wisdom as the foundation of friendship.
+**Yellow**: Choose adventure as the path you'll walk together.
+**Red**: Choose kindness as the bond that keeps you together.
+**Blue**: Choose stories as the memories you'll share forever.
 
 ### Green  
-Together, they wish for endless adventures, their bond unbreakable, their spirits high for the next journey.  
+"The greatest adventure is understanding each other," Luna says. As you all touch the gem together, your wish forms around seeing each other clearly - accepting differences and learning from each other. The gem's light helps you see the world through your friends' eyes, making your friendship even stronger.
 
 ### Yellow  
-Their collective wish for more adventures promises countless stories to be written in the stars above.  
+"Let's discover the world together!" Finn exclaims as you all place your paws, trunk, and wing on the gem. Your wish becomes a promise of adventures faced side by side, with each friend's special talents making impossible challenges possible. The path ahead glows with countless discoveries waiting for you all.
 
 ### Red  
-Wishing together, their hearts are full, knowing that happiness comes from the adventures shared.  
+"Our different notes create a beautiful harmony," Ellie says as you touch the gem together. Your wish centers on the kindness that has helped you through every challenge - supporting each other and celebrating successes together. The gem's warmth fills your hearts, strengthening bonds that can never be broken.
 
 ### Blue  
-Their wish echoes out, a promise of friendship and discovery that no gem could ever surpass.  
+"Our story is just beginning," Pip chirps happily as you reach for the gem together. Your wish takes shape around the adventures you'll share and the memories you'll make. The gem shows images of past challenges you've overcome and future moments waiting to happen in the continuing story of your friendship.
 
 ---
 
@@ -256,18 +283,22 @@ Page 10
 page10.png  
 
 ### Fixed text  
-The Rainbow Gem shines brightly, granting them a map to new adventures. They step forward, their hearts light, ready for wherever the map leads them next. Together, they've learned that the true treasures in life are the friendships we cherish and the adventures we share.  
+The Rainbow Gem rises high above you and transforms into a shower of colorful light! When the magic settles, it leaves behind something special: a magical map that changes to show new adventures perfect for your group of friends.
+
+Together, you step out of the chamber, ready to follow wherever the new map leads.
+
+The real treasure wasn't the gem after all - it was the journey that brought you together as friends.
 
 ### Green  
-The end of one adventure is just the beginning of another, with the Rainbow Gem lighting their way to new mysteries.  
+The map shows an ancient library with books that write themselves as adventures happen. Luna's eyes widen with wonder. "Every ending is just another beginning," she says as you set off together. You've learned that wisdom shared with friends becomes something even more powerful - understanding.
 
 ### Yellow  
-Laughter and excitement fill the air as they embark on their next quest, the world full of endless possibilities.  
+The map sparkles with exciting new places to explore - mountains, hidden valleys, and star-filled skies. Finn bounces with excitement, pointing out possible routes. "This is just the first page of our adventure book!" he says. The best part of any journey, you've discovered, is sharing it with friends.
 
 ### Red  
-With hearts full of joy and the promise of new adventures, they step into the unknown, their friendship their guiding light.  
+The map reveals connections between places and creatures you never knew existed. Ellie smiles at all of you. "The Rainbow Gem showed us what I think we already knew in our hearts," she says, "that together, we make something more magical than any wish." Your friendship will bring harmony wherever you go.
 
 ### Blue  
-As they venture forth, the melody of their laughter blends with the whispers of the wind, a testament to their unbreakable bond.  
+The map shimmers with new stories waiting to be discovered. Pip hops excitedly, already singing about your Rainbow Gem adventure. "Every adventure becomes a story, every story becomes a song," he chirps happily. The tale of your friendship - with all its challenges and triumphs - will be a story worth telling forever.
 
 ---
