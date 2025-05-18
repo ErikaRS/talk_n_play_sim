@@ -55,22 +55,14 @@ class StoryApp {
     }
     
     populateStoryPicker() {
-        // Add test stories for demonstration
-        for (let i = 1; i <= 20; i++) {
-            const storyItem = document.createElement('div');
-            storyItem.className = 'story-item';
-            storyItem.textContent = `Test ${i}`;
-            storyItem.dataset.index = i;
-            
-            this.elements.storyList.appendChild(storyItem);
-        }
-        
-        // Add real stories at the end of the list
+        // Add real stories from the available stories list
         this.availableStories.forEach((story, index) => {
             const storyItem = document.createElement('div');
-            storyItem.className = 'story-item real-story';
+            storyItem.className = 'story-item';
             storyItem.textContent = story.title;
             storyItem.dataset.index = index;
+            storyItem.dataset.path = story.path;
+            storyItem.dataset.folder = story.folder;
             
             this.elements.storyList.appendChild(storyItem);
         });
@@ -96,9 +88,22 @@ class StoryApp {
                 });
                 item.classList.add('selected');
                 
-                // In a real implementation, we would load the selected story here
-                // For now, we're just showing the selection without loading
-                console.log(`Selected: ${item.textContent}`);
+                // Get story data from dataset
+                const index = parseInt(item.dataset.index, 10);
+                const story = this.availableStories[index];
+                
+                if (story) {
+                    // Update the CONFIG values
+                    CONFIG.storyPath = story.path;
+                    CONFIG.storyFolder = story.folder;
+                    
+                    // Reset the app state
+                    this.currentPageIndex = 0;
+                    this.activeColor = null;
+                    
+                    // Load the selected story
+                    this.loadStory(story.path);
+                }
             });
         });
     }
@@ -151,6 +156,19 @@ class StoryApp {
             
             const markdown = await response.text();
             this.story = MarkdownParser.parseStory(markdown, CONFIG.colors);
+            
+            // Extract story title for the picker
+            if (this.story && this.story.title) {
+                // Update the story picker to show the selected story
+                this.renderer.updateStorySelection(this.story.title);
+            } else {
+                // Find the story object based on path and update selection
+                const story = this.availableStories.find(s => s.path === storyPath);
+                if (story) {
+                    this.renderer.updateStorySelection(story.title);
+                }
+            }
+            
             this.showCurrentPage();
         } catch (error) {
             console.error('Error loading story:', error);
