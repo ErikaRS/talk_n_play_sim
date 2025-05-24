@@ -1,0 +1,5 @@
+[test]
+# Use jsdom for browser environment
+preload = "./bun.setup.js"
+# Include test files pattern
+include = ["tests-bun/**/*.test.js"]

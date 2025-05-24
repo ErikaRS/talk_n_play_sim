@@ -4,14 +4,16 @@
   "description": "Talk 'n Play Simulator",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:vitest",
+    "test": "npm run test:bun",
+    "test:bun": "npx bun test tests-bun/",
+    "test:watch": "npx bun test --watch tests-bun/",
     "test:vitest": "npx vitest run",
-    "test:watch": "npx vitest",
     "generate-story": "node scripts/generate-story.js"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
+    "bun-types": "^1.2.14",
     "jsdom": "^22.1.0",
     "vite": "^6.3.5",
     "vitest": "^3.1.3"
