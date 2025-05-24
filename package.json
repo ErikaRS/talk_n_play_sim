@@ -4,8 +4,8 @@
   "description": "Talk 'n Play Simulator",
   "main": "index.js",
   "scripts": {
-    "test": "npx bun test tests-bun/",
-    "test:watch": "npx bun test --watch tests-bun/",
+    "test": "npx bun test tests/",
+    "test:watch": "npx bun test --watch tests/",
     "generate-story": "node scripts/generate-story.js"
   },
   "devDependencies": {
